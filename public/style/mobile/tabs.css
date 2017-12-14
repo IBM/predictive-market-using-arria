@@ -1,0 +1,45 @@
+#tabs {
+  background-color: #1d3649;
+  box-shadow: 0 2px 2px rgba( 0, 0, 0, 0.40 );    
+  display: flex;
+  flex: none;  
+  flex-direction: row;
+  height: 48px;
+  position: relative;
+  width: 100vw;
+}
+
+#tabs > button {
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: rgb( 255, 255, 255 );
+  flex-basis: 0;
+  flex-grow: 1;
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 16px;
+  height: 48px;
+  line-height: 48px;
+  margin: 0;
+  min-width: 0;
+  opacity: 0.40;
+  outline: none;
+  padding: 0;
+  text-overflow: ellipsis;
+  transition: opacity 0.60s;
+}
+
+#tabs > button.selected {
+  opacity: 0.80;
+}
+
+#tabs > .indicator {
+  background-color: #0b8571;
+  bottom: 0;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transition: left 0.60s;
+  width: 25vw;
+}

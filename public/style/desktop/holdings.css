@@ -1,0 +1,160 @@
+.holdings_table {
+  border-collapse: collapse;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.holdings_table > thead > tr {
+  display: flex;
+  flex-direction: row;
+  height: 56px;
+  margin: 0;
+  padding: 0 16px 0 16px;
+}
+
+.holdings_table > thead > tr > th {
+  color: #0b8571;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  height: 56px;
+  line-height: 56px;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.holdings_table > thead > tr > th:first-of-type {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.holdings_table > thead > tr > th:nth-of-type( 2 ) {
+  width: 65px;
+}
+
+.holdings_table > thead > tr > th:nth-of-type( 3 ) {
+  width: 65px;
+}
+
+.holdings_table > thead > tr > th:nth-of-type( 4 ) {
+  width: 70px;
+}
+
+.holdings_table > thead > tr > th:nth-of-type( 5 ) {
+  width: 65px;
+}
+
+.holdings_table > thead > tr > th:nth-of-type( 6 ) {
+  width: 65px;
+}
+
+.holdings_table > thead > tr > th:nth-of-type( 7 ) {
+  width: 85px;
+}
+
+.holdings_table > thead > tr > th:nth-of-type( 8 ) {
+  width: 85px;
+}
+
+.holdings_table > thead > tr > th:nth-of-type( 9 ) {
+  width: 85px;
+}
+
+.holdings_table > tbody > tr {
+  border-bottom: 1px solid rgba( 0, 0, 0, 0.12 );     
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0 16px 0 16px;
+}
+
+.holdings_table > tbody > tr:first-of-type {
+  background-color: #0b8571;  
+  border: none;
+}
+
+.holdings_table > tbody > tr:first-of-type > td {
+  color: white;
+}
+
+.holdings_table > tbody > tr.sector {
+  background:  none;
+  background-color: #eeeeee;    
+  background-image: url( /img/open.arrow.svg );
+  background-position: 8px center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border-bottom: 1px solid rgba( 0, 0, 0, 0.12 );   
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+  margin: 0;
+  padding: 0 16px 0 16px;
+}
+
+.holdings_table > tbody > tr.sector.closed {
+  background-image: url( /img/closed.arrow.svg );  
+}
+
+.holdings_table > tbody > tr.company {
+  background-color: #f5f5f5;
+}
+
+.holdings_table > tbody > tr > td {
+  color: rgba( 0, 0, 0, 0.87 );
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  height: 48px;
+  line-height: 48px;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.holdings_table > tbody > tr > td:first-of-type {
+  flex-grow: 1;  
+  padding: 0 0 0 24px;
+  text-align: left;
+}
+
+.holdings_table > tbody > tr > td:nth-of-type( 2 ) {
+  width: 65px;
+}
+
+.holdings_table > tbody > tr > td:nth-of-type( 3 ) {
+  width: 65px;
+}
+
+.holdings_table > tbody > tr > td:nth-of-type( 4 ) {
+  width: 70px;
+}
+
+.holdings_table > tbody > tr > td:nth-of-type( 5 ) {
+  width: 65px;
+}
+
+.holdings_table > tbody > tr > td:nth-of-type( 6 ) {
+  width: 65px;
+}
+
+.holdings_table > tbody > tr > td:nth-of-type( 7 ) {
+  width: 85px;
+}
+
+.holdings_table > tbody > tr > td:nth-of-type( 8 ) {
+  width: 85px;
+}
+
+.holdings_table > tbody > tr > td:nth-of-type( 9 ) {
+  width: 85px;
+}
+
+.holdings_table > tbody > tr > td.increase {
+  color: green;
+}
+
+.holdings_table > tbody > tr > td.decrease {
+  color: red;
+}

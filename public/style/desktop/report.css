@@ -1,0 +1,21 @@
+#report {
+  flex-grow: 1;
+  opacity: 0;
+  overflow: auto;
+  padding: 50px 90px 75px 225px;
+  transition: opacity 0.60s;
+  visibility: hidden;
+}
+
+#report > h1 {
+  color: #0b8571;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 16px 0 16px;
+}
+
+#report > p {
+  color: rgba( 0, 0, 0, 0.90 );
+  font-size: 16px;
+  margin: 16px 16px 8px 16px;
+}

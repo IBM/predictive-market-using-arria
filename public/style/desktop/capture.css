@@ -1,0 +1,55 @@
+#capture {
+  background-color: #1d3649;
+  box-shadow: 5px 0 5px rgba( 0, 0, 0, 0.40 ), -5px 0 5px rgba( 0, 0, 0, 0.20 );    
+  flex: none;
+  overflow: hidden;
+}
+
+#login {
+  opacity: 0;
+}
+
+#capture > form {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin: 0 50px 0 50px;
+  width: 250px;
+}
+
+#capture > form > .row {
+  display: flex;
+  flex-direction: row;
+}
+
+#capture > form > .row:last-of-type > div:first-of-type {
+  width: 44px; 
+  height: 22px; 
+  border-right: dotted 1px rgba( 255, 255, 255, 0.60 );
+}
+
+#capture > form > .row:last-of-type > div:last-of-type {
+  height: 22px; 
+  flex-grow: 1;  
+}
+
+#capture > form > .row > .icon {
+  align-items: center;
+  border-bottom: dotted 1px rgba( 255, 255, 255, 0.60 );  
+  border-right: dotted 1px rgba( 255, 255, 255, 0.60 );
+  display: flex;
+  flex: none;
+  justify-content: center;
+  height: 44px;
+  min-width: 44px;
+}
+
+#capture > form > .row > .icon > img {
+  opacity: 0.40;
+  transition: opacity 0.30s;
+}
+
+#capture > form > .row > .icon > img.active {
+  opacity: 0.80;
+}

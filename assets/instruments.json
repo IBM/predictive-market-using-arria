@@ -1,0 +1,142 @@
+[
+	{
+		"instrument": "CX_US031162BG42_USD",
+		"scenario": "Base Scenario (0.0000)",
+		"values": [
+			{
+				"THEO/Price": "105.6456 USD",
+				"date": "2017/11/07"
+			}
+		]
+	},
+	{
+		"instrument": "CX_US031162BK53_USD",
+		"scenario": "Base Scenario (0.0000)",
+		"values": [
+			{
+				"THEO/Price": "108.8220 USD",
+				"date": "2017/11/07"
+			}
+		]
+	},
+	{
+		"instrument": "CX_US03232PAD06_USD",
+		"scenario": "Base Scenario (0.0000)",
+		"values": [
+			{
+				"THEO/Price": "104.0000 USD",
+				"date": "2017/11/07"
+			}
+		]
+	},
+	{
+		"instrument": "CX_US032511BM81_USD",
+		"scenario": "Base Scenario (0.0000)",
+		"values": [
+			{
+				"THEO/Price": "107.4313 USD",
+				"date": "2017/11/07"
+			}
+		]
+	},
+	{
+		"instrument": "CX_US032654AN54_USD",
+		"scenario": "Base Scenario (0.0000)",
+		"values": [
+			{
+				"THEO/Price": "99.5753 USD",
+				"date": "2017/11/07"
+			}
+		]
+	},
+	{
+		"instrument": "CX_US035242AJ52_USD",
+		"scenario": "Base Scenario (0.0000)",
+		"values": [
+			{
+				"THEO/Price": "101.0585 USD",
+				"date": "2017/11/07"
+			}
+		]
+	},
+	{
+		"instrument": "CX_US035242AL09_USD",
+		"scenario": "Base Scenario (0.0000)",
+		"values": [
+			{
+				"THEO/Price": "101.9127 USD",
+				"date": "2017/11/07"
+			}
+		]
+	},
+	{
+		"instrument": "CX_US031162BG42_USD",
+		"scenario": "CONDITIONAL_1 (1.0000)",
+		"values": [
+			{
+				"THEO/Price": "105.6734 USD",
+				"date": "2017/11/07"
+			}
+		]
+	},
+	{
+		"instrument": "CX_US031162BK53_USD",
+		"scenario": "CONDITIONAL_1 (1.0000)",
+		"values": [
+			{
+				"THEO/Price": "108.9317 USD",
+				"date": "2017/11/07"
+			}
+		]
+	},
+	{
+		"instrument": "CX_US03232PAD06_USD",
+		"scenario": "CONDITIONAL_1 (1.0000)",
+		"values": [
+			{
+				"THEO/Price": "104.0314 USD",
+				"date": "2017/11/07"
+			}
+		]
+	},
+	{
+		"instrument": "CX_US032511BM81_USD",
+		"scenario": "CONDITIONAL_1 (1.0000)",
+		"values": [
+			{
+				"THEO/Price": "107.3607 USD",
+				"date": "2017/11/07"
+			}
+		]
+	},
+	{
+		"instrument": "CX_US032654AN54_USD",
+		"scenario": "CONDITIONAL_1 (1.0000)",
+		"values": [
+			{
+				"THEO/Price": "99.4934 USD",
+				"date": "2017/11/07"
+			}
+		]
+	},
+	{
+		"instrument": "CX_US035242AJ52_USD",
+		"scenario": "CONDITIONAL_1 (1.0000)",
+		"values": [
+			{
+				"THEO/Price": "101.0443 USD",
+				"date": "2017/11/07"
+			}
+		]
+	},
+	{
+		"instrument": "CX_US035242AL09_USD",
+		"scenario": "CONDITIONAL_1 (1.0000)",
+		"values": [
+			{
+				"THEO/Price": "101.9610 USD",
+				"date": "2017/11/07"
+			}
+		]
+	}
+]

@@ -1,0 +1,1101 @@
+{
+	"scenario": {
+		"inputRiskFactorId": "CX_EQI_SPDJ_USA500_BMK_USD_LargeCap_Price",
+		"inputRiskFactorName": "S&P 500 Index",
+		"inputMagnitudePercentage": "0.9"
+	},
+	"correlations": [
+		{
+			"category": "Index",
+			"correlationValue": 0.47733963064670165,
+			"all": [
+				{
+					"correlationValue": 0.38411312889752697,
+					"factorId": "CX_EQI_AUSX_Sydney_BMK_AUD_LargeCap_Price",
+					"factorName": "ASX All Ordinaries Index",
+					"regionName": "APAC"
+				},
+				{
+					"correlationValue": 0.5918764909782132,
+					"factorId": "CX_EQI_NYSE_CAC40_BMK_EUR_LargeCap_Price",
+					"factorName": "CAC 40 Index",
+					"regionName": "NA"
+				},
+				{
+					"correlationValue": -0.7479472127408857,
+					"factorId": "CX_EQI_SPDJ_USA_BMK_USD_LargeCap_Price",
+					"factorName": "CBOE Market Volatility Index",
+					"regionName": "NA"
+				},
+				{
+					"correlationValue": 0.5865430569438665,
+					"factorId": "CX_EQI_STOX_Euro_BMK_EUR_MidCap_Price",
+					"factorName": "EURO STOXX Mid EUR Price Index",
+					"regionName": "EU"
+				},
+				{
+					"correlationValue": 0.5983921774876162,
+					"factorId": "CX_EQI_FTSE_UK_BMK_GBP_LargeCap_Price",
+					"factorName": "FTSE 100 Index",
+					"regionName": "UK"
+				},
+				{
+					"correlationValue": 0.28252435156196987,
+					"factorId": "CX_EQI_HSNG_Asia_BMK_HKD_LargeCap_Price",
+					"factorName": "Hang Seng Index",
+					"regionName": "APAC"
+				},
+				{
+					"correlationValue": 0.9315019585478054,
+					"factorId": "CX_EQI_NASD_USA100_BMK_USD_LargeCap_Price",
+					"factorName": "NASDAQ 100 Index",
+					"regionName": "NA"
+				},
+				{
+					"correlationValue": 0.3919612901551075,
+					"factorId": "CX_EQI_NIKK_Asia_BMK_JPY_LargeCap_Price",
+					"factorName": "Nikkei 225 Index",
+					"regionName": "APAC"
+				},
+				{
+					"correlationValue": 0.9999999999999998,
+					"factorId": "CX_EQI_SPDJ_USA500_BMK_USD_LargeCap_Price",
+					"factorName": "S&P 500 Index",
+					"regionName": "NA"
+				},
+				{
+					"correlationValue": 0.4791908160875584,
+					"factorId": "CX_EQI_BMFX_SaoPaulo_BMK_BRL_LargeCap_TotalReturn",
+					"factorName": "Sao Paulo SE Bovespa Index",
+					"regionName": "SA"
+				},
+				{
+					"correlationValue": 0.75257987919494,
+					"factorId": "CX_EQI_SPDJ_Toronto_BMK_CAD_LargeCap_Price",
+					"factorName": "TSX-Toronto Stock Exchange 300 Composite Index",
+					"regionName": "NA"
+				}
+			],
+			"regions": [
+				{
+					"regionName": "NA",
+					"correlationValue": 0.5056022231960144
+				},
+				{
+					"regionName": "APAC",
+					"correlationValue": 0.3528662568715348
+				},
+				{
+					"regionName": "UK",
+					"correlationValue": 0.5983921774876162
+				},
+				{
+					"regionName": "SA",
+					"correlationValue": 0.4791908160875584
+				},
+				{
+					"regionName": "EU",
+					"correlationValue": 0.5865430569438665
+				}
+			]
+		},
+		{
+			"category": "Credit Spread",
+			"correlationValue": -0.011321776879169779,
+			"all": [
+				{
+					"correlationValue": -0.049757615353770566,
+					"factorId": "CX_CSC_RSD_SEN_BNK_AA_MD",
+					"factorName": "Bank AA",
+					"sectorName": "Bank",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": -0.07903717893772623,
+					"factorId": "CX_CSC_RSD_SEN_BNK_BBB_MD",
+					"factorName": "Bank BBB",
+					"sectorName": "Bank",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": -0.06859670646317514,
+					"factorId": "CX_CSC_RSD_SEN_BNK_CCC_MD",
+					"factorName": "Bank CCC",
+					"sectorName": "Bank",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": 0.039966792933339365,
+					"factorId": "CX_CSC_RSD_SEN_BMK_AA_MD",
+					"factorName": "Benchmark AA",
+					"sectorName": "Benchmark",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": -0.012558779723874187,
+					"factorId": "CX_CSC_RSD_SEN_BMK_BBB_MD",
+					"factorName": "Benchmark BBB",
+					"sectorName": "Benchmark",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": -0.014654352731772652,
+					"factorId": "CX_CSC_RSD_SEN_BMK_CCC_MD",
+					"factorName": "Benchmark CCC",
+					"sectorName": "Benchmark",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": 0.05878363702918516,
+					"factorId": "CX_CSC_RSD_SEN_CPG_AA_MD",
+					"factorName": "Capital Goods AA",
+					"sectorName": "Capital Goods",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": 0.03414869937288469,
+					"factorId": "CX_CSC_RSD_SEN_CPG_BBB_MD",
+					"factorName": "Capital Goods BBB",
+					"sectorName": "Capital Goods",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": 0.023106290553673227,
+					"factorId": "CX_CSC_RSD_SEN_CPG_CCC_MD",
+					"factorName": "Capital Goods CCC",
+					"sectorName": "Capital Goods",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": -0.03773993182587611,
+					"factorId": "CX_CSC_RSD_SEN_ENE_AA_MD",
+					"factorName": "Energy AA",
+					"sectorName": "Energy",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": -0.03434566899306457,
+					"factorId": "CX_CSC_RSD_SEN_ENE_BBB_MD",
+					"factorName": "Energy BBB",
+					"sectorName": "Energy",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": -0.03742716447828377,
+					"factorId": "CX_CSC_RSD_SEN_ENE_CCC_MD",
+					"factorName": "Energy CCC",
+					"sectorName": "Energy",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": 0.021315021290398507,
+					"factorId": "CX_CSC_RSD_SEN_SVC_AA_MD",
+					"factorName": "Software and Services AA",
+					"sectorName": "Software and Services",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": 0.008555674571084321,
+					"factorId": "CX_CSC_RSD_SEN_SVC_BBB_MD",
+					"factorName": "Software and Services BBB",
+					"sectorName": "Software and Services",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": -0.033819146340002444,
+					"factorId": "CX_CSC_RSD_SEN_SVC_CCC_MD",
+					"factorName": "Software and Services CCC",
+					"sectorName": "Software and Services",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": 0.059706328884275635,
+					"factorId": "CX_CSC_RSD_SEN_TEL_AA_MD",
+					"factorName": "Telecommunications AA",
+					"sectorName": "Telecommunications",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": 0.03190135566187116,
+					"factorId": "CX_CSC_RSD_SEN_TEL_BBB_MD",
+					"factorName": "Telecommunications BBB",
+					"sectorName": "Telecommunications",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": 0.03010619809921928,
+					"factorId": "CX_CSC_RSD_SEN_TEL_CCC_MD",
+					"factorName": "Telecommunications CCC",
+					"sectorName": "Telecommunications",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": -0.03076487199774958,
+					"factorId": "CX_CSC_RSD_SEN_TRA_AA_MD",
+					"factorName": "Transportation AA",
+					"sectorName": "Transportation",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": -0.07685707821002084,
+					"factorId": "CX_CSC_RSD_SEN_TRA_BBB_MD",
+					"factorName": "Transportation BBB",
+					"sectorName": "Transportation",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": -0.0695045571012677,
+					"factorId": "CX_CSC_RSD_SEN_TRA_CCC_MD",
+					"factorName": "Transportation CCC",
+					"sectorName": "Transportation",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": 0.02087965292624019,
+					"factorId": "CX_CSC_RSD_SEN_UTL_AA_MD",
+					"factorName": "Utility Power AA",
+					"sectorName": "Utility Power",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": -0.02655078536745878,
+					"factorId": "CX_CSC_RSD_SEN_UTL_BBB_MD",
+					"factorName": "Utility Power BBB",
+					"sectorName": "Utility Power",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": -0.028578458898203783,
+					"factorId": "CX_CSC_RSD_SEN_UTL_CCC_MD",
+					"factorName": "Utility Power CCC",
+					"sectorName": "Utility Power",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				}
+			],
+			"sectors": [
+				{
+					"sectorName": "Telecommunications",
+					"correlationValue": 0.04057129421512202
+				},
+				{
+					"sectorName": "Capital Goods",
+					"correlationValue": 0.03867954231858103
+				},
+				{
+					"sectorName": "Utility Power",
+					"correlationValue": -0.011416530446474124
+				},
+				{
+					"sectorName": "Software and Services",
+					"correlationValue": -0.0013161501595065385
+				},
+				{
+					"sectorName": "Transportation",
+					"correlationValue": -0.05904216910301271
+				},
+				{
+					"sectorName": "Benchmark",
+					"correlationValue": 0.004251220159230841
+				},
+				{
+					"sectorName": "Bank",
+					"correlationValue": -0.06579716691822397
+				},
+				{
+					"sectorName": "Energy",
+					"correlationValue": -0.03650425509907482
+				}
+			]
+		},
+		{
+			"category": "Rates",
+			"correlationValue": 0.17203296322168748,
+			"all": [
+				{
+					"correlationValue": 0.1398016205642785,
+					"factorId": "CX_IRC_IBK_USD_USD_MD",
+					"factorName": "USD Interbank Curve",
+					"tenorName": "365"
+				},
+				{
+					"correlationValue": 0.1629349964546698,
+					"factorId": "CX_IRC_IBK_USD_USD_MD",
+					"factorName": "USD Interbank Curve",
+					"tenorName": "730"
+				},
+				{
+					"correlationValue": 0.19553945646534587,
+					"factorId": "CX_IRC_IBK_USD_USD_MD",
+					"factorName": "USD Interbank Curve",
+					"tenorName": "1460"
+				},
+				{
+					"correlationValue": 0.18985577940245577,
+					"factorId": "CX_IRC_IBK_USD_USD_MD",
+					"factorName": "USD Interbank Curve",
+					"tenorName": "3650"
+				}
+			],
+			"tenors": [
+				{
+					"tenorName": "730",
+					"correlationValue": 0.1629349964546698
+				},
+				{
+					"tenorName": "1460",
+					"correlationValue": 0.19553945646534587
+				},
+				{
+					"tenorName": "365",
+					"correlationValue": 0.1398016205642785
+				},
+				{
+					"tenorName": "3650",
+					"correlationValue": 0.18985577940245577
+				}
+			]
+		},
+		{
+			"category": "FX",
+			"correlationValue": 0.07077170055561514,
+			"all": [
+				{
+					"correlationValue": 0.23728172194464128,
+					"factorId": "CX_FXC_AUD_USD_Spot",
+					"factorName": "AUD/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "AUD"
+				},
+				{
+					"correlationValue": 0.18480489565354902,
+					"factorId": "CX_FXC_BRL_USD_Spot",
+					"factorName": "BRL/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "BRL"
+				},
+				{
+					"correlationValue": 0.1580742915231436,
+					"factorId": "CX_FXC_CAD_USD_Spot",
+					"factorName": "CAD/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "CAD"
+				},
+				{
+					"correlationValue": -0.09786648634695515,
+					"factorId": "CX_FXC_CHF_USD_Spot",
+					"factorName": "CHF/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "CHF"
+				},
+				{
+					"correlationValue": -0.08017426436829918,
+					"factorId": "CX_FXC_EUR_USD_Spot",
+					"factorName": "EUR/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "EUR"
+				},
+				{
+					"correlationValue": 0.15857478130226277,
+					"factorId": "CX_FXC_GBP_USD_Spot",
+					"factorName": "GBP/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "GBP"
+				},
+				{
+					"correlationValue": 0.08784661329197808,
+					"factorId": "CX_FXC_HKD_USD_Spot",
+					"factorName": "HKD/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "HKD"
+				},
+				{
+					"correlationValue": -0.26897198038544673,
+					"factorId": "CX_FXC_JPY_USD_Spot",
+					"factorName": "JPY/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "JPY"
+				},
+				{
+					"correlationValue": 0.2573757323856627,
+					"factorId": "CX_FXC_RUB_USD_Spot",
+					"factorName": "RUB/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "RUB"
+				}
+			]
+		},
+		{
+			"category": "Macroeconomic",
+			"correlationValue": 0.05654390976678636,
+			"all": [
+				{
+					"correlationValue": 0.1383633181643716,
+					"factorId": "CX_COS_EN_BrentCrude_IFEU",
+					"factorName": "Spot Price of Brent Crude Oil"
+				},
+				{
+					"correlationValue": -0.12297205668471638,
+					"factorId": "CX_COS_ME_Gold_XCEC",
+					"factorName": "Spot Price of Gold"
+				},
+				{
+					"correlationValue": 0.15424046782070386,
+					"factorId": "CX_COS_EN_WTICrude_IFEU",
+					"factorName": "Spot Price of WTI Crude"
+				}
+			]
+		}
+	],
+	"impactedCategories": [
+		{
+			"category": "Index",
+			"valuePercentageChange": 1.0242444545454545,
+			"all": [
+				{
+					"valuePercentageChange": "1.03369",
+					"factorId": "CX_EQI_AUSX_Sydney_BMK_AUD_LargeCap_Price",
+					"factorName": "ASX All Ordinaries Index",
+					"regionName": "APAC"
+				},
+				{
+					"valuePercentageChange": "1.08289",
+					"factorId": "CX_EQI_NYSE_CAC40_BMK_EUR_LargeCap_Price",
+					"factorName": "CAC 40 Index",
+					"regionName": "NA"
+				},
+				{
+					"valuePercentageChange": "0.538159",
+					"factorId": "CX_EQI_SPDJ_USA_BMK_USD_LargeCap_Price",
+					"factorName": "CBOE Market Volatility Index",
+					"regionName": "NA"
+				},
+				{
+					"valuePercentageChange": "1.07371",
+					"factorId": "CX_EQI_STOX_Euro_BMK_EUR_MidCap_Price",
+					"factorName": "EURO STOXX Mid EUR Price Index",
+					"regionName": "EU"
+				},
+				{
+					"valuePercentageChange": "1.06701",
+					"factorId": "CX_EQI_FTSE_UK_BMK_GBP_LargeCap_Price",
+					"factorName": "FTSE 100 Index",
+					"regionName": "UK"
+				},
+				{
+					"valuePercentageChange": "1.03658",
+					"factorId": "CX_EQI_HSNG_Asia_BMK_HKD_LargeCap_Price",
+					"factorName": "Hang Seng Index",
+					"regionName": "APAC"
+				},
+				{
+					"valuePercentageChange": "1.11596",
+					"factorId": "CX_EQI_NASD_USA100_BMK_USD_LargeCap_Price",
+					"factorName": "NASDAQ 100 Index",
+					"regionName": "NA"
+				},
+				{
+					"valuePercentageChange": "1.06345",
+					"factorId": "CX_EQI_NIKK_Asia_BMK_JPY_LargeCap_Price",
+					"factorName": "Nikkei 225 Index",
+					"regionName": "APAC"
+				},
+				{
+					"valuePercentageChange": "1.1",
+					"factorId": "CX_EQI_SPDJ_USA500_BMK_USD_LargeCap_Price",
+					"factorName": "S&P 500 Index",
+					"regionName": "NA"
+				},
+				{
+					"valuePercentageChange": "1.08066",
+					"factorId": "CX_EQI_BMFX_SaoPaulo_BMK_BRL_LargeCap_TotalReturn",
+					"factorName": "Sao Paulo SE Bovespa Index",
+					"regionName": "SA"
+				},
+				{
+					"valuePercentageChange": "1.07458",
+					"factorId": "CX_EQI_SPDJ_Toronto_BMK_CAD_LargeCap_Price",
+					"factorName": "TSX-Toronto Stock Exchange 300 Composite Index",
+					"regionName": "NA"
+				}
+			],
+			"regions": [
+				{
+					"regionName": "NA",
+					"valuePercentageChange": 0.9823178
+				},
+				{
+					"regionName": "APAC",
+					"valuePercentageChange": 1.0445733333333334
+				},
+				{
+					"regionName": "UK",
+					"valuePercentageChange": 1.06701
+				},
+				{
+					"regionName": "SA",
+					"valuePercentageChange": 1.08066
+				},
+				{
+					"regionName": "EU",
+					"valuePercentageChange": 1.07371
+				}
+			]
+		},
+		{
+			"category": "Credit Spread",
+			"valuePercentageChange": 1.0192605000000003,
+			"all": [
+				{
+					"valuePercentageChange": "1.0118",
+					"factorId": "CX_CSC_RSD_SEN_BNK_AA_MD",
+					"factorName": "Bank AA",
+					"sectorName": "Bank",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "0.958624",
+					"factorId": "CX_CSC_RSD_SEN_BNK_BBB_MD",
+					"factorName": "Bank BBB",
+					"sectorName": "Bank",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "0.959367",
+					"factorId": "CX_CSC_RSD_SEN_BNK_CCC_MD",
+					"factorName": "Bank CCC",
+					"sectorName": "Bank",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.04219",
+					"factorId": "CX_CSC_RSD_SEN_BMK_AA_MD",
+					"factorName": "Benchmark AA",
+					"sectorName": "Benchmark",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "0.987838",
+					"factorId": "CX_CSC_RSD_SEN_BMK_BBB_MD",
+					"factorName": "Benchmark BBB",
+					"sectorName": "Benchmark",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.23557",
+					"factorId": "CX_CSC_RSD_SEN_BMK_CCC_MD",
+					"factorName": "Benchmark CCC",
+					"sectorName": "Benchmark",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.07809",
+					"factorId": "CX_CSC_RSD_SEN_CPG_AA_MD",
+					"factorName": "Capital Goods AA",
+					"sectorName": "Capital Goods",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.02187",
+					"factorId": "CX_CSC_RSD_SEN_CPG_BBB_MD",
+					"factorName": "Capital Goods BBB",
+					"sectorName": "Capital Goods",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "0.945929",
+					"factorId": "CX_CSC_RSD_SEN_CPG_CCC_MD",
+					"factorName": "Capital Goods CCC",
+					"sectorName": "Capital Goods",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "0.984384",
+					"factorId": "CX_CSC_RSD_SEN_ENE_AA_MD",
+					"factorName": "Energy AA",
+					"sectorName": "Energy",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.01745",
+					"factorId": "CX_CSC_RSD_SEN_ENE_BBB_MD",
+					"factorName": "Energy BBB",
+					"sectorName": "Energy",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.01849",
+					"factorId": "CX_CSC_RSD_SEN_ENE_CCC_MD",
+					"factorName": "Energy CCC",
+					"sectorName": "Energy",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.03339",
+					"factorId": "CX_CSC_RSD_SEN_SVC_AA_MD",
+					"factorName": "Software and Services AA",
+					"sectorName": "Software and Services",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.00383",
+					"factorId": "CX_CSC_RSD_SEN_SVC_BBB_MD",
+					"factorName": "Software and Services BBB",
+					"sectorName": "Software and Services",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "0.996741",
+					"factorId": "CX_CSC_RSD_SEN_SVC_CCC_MD",
+					"factorName": "Software and Services CCC",
+					"sectorName": "Software and Services",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.07565",
+					"factorId": "CX_CSC_RSD_SEN_TEL_AA_MD",
+					"factorName": "Telecommunications AA",
+					"sectorName": "Telecommunications",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.01957",
+					"factorId": "CX_CSC_RSD_SEN_TEL_BBB_MD",
+					"factorName": "Telecommunications BBB",
+					"sectorName": "Telecommunications",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.0395",
+					"factorId": "CX_CSC_RSD_SEN_TEL_CCC_MD",
+					"factorName": "Telecommunications CCC",
+					"sectorName": "Telecommunications",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.03677",
+					"factorId": "CX_CSC_RSD_SEN_TRA_AA_MD",
+					"factorName": "Transportation AA",
+					"sectorName": "Transportation",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "0.982897",
+					"factorId": "CX_CSC_RSD_SEN_TRA_BBB_MD",
+					"factorName": "Transportation BBB",
+					"sectorName": "Transportation",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "0.983886",
+					"factorId": "CX_CSC_RSD_SEN_TRA_CCC_MD",
+					"factorName": "Transportation CCC",
+					"sectorName": "Transportation",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.04538",
+					"factorId": "CX_CSC_RSD_SEN_UTL_AA_MD",
+					"factorName": "Utility Power AA",
+					"sectorName": "Utility Power",
+					"ratingName": "AA",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "0.991001",
+					"factorId": "CX_CSC_RSD_SEN_UTL_BBB_MD",
+					"factorName": "Utility Power BBB",
+					"sectorName": "Utility Power",
+					"ratingName": "BBB",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "0.992035",
+					"factorId": "CX_CSC_RSD_SEN_UTL_CCC_MD",
+					"factorName": "Utility Power CCC",
+					"sectorName": "Utility Power",
+					"ratingName": "CCC",
+					"tenorName": "1460"
+				}
+			],
+			"sectors": [
+				{
+					"sectorName": "Telecommunications",
+					"valuePercentageChange": 1.0449066666666669
+				},
+				{
+					"sectorName": "Capital Goods",
+					"valuePercentageChange": 1.0152963333333334
+				},
+				{
+					"sectorName": "Utility Power",
+					"valuePercentageChange": 1.009472
+				},
+				{
+					"sectorName": "Software and Services",
+					"valuePercentageChange": 1.0113203333333334
+				},
+				{
+					"sectorName": "Transportation",
+					"valuePercentageChange": 1.0011843333333335
+				},
+				{
+					"sectorName": "Benchmark",
+					"valuePercentageChange": 1.0885326666666666
+				},
+				{
+					"sectorName": "Bank",
+					"valuePercentageChange": 0.9765969999999999
+				},
+				{
+					"sectorName": "Energy",
+					"valuePercentageChange": 1.0067746666666666
+				}
+			]
+		},
+		{
+			"category": "Rates",
+			"valuePercentageChange": 0.9963405000000001,
+			"all": [
+				{
+					"valuePercentageChange": "0.996927",
+					"factorId": "CX_IRC_IBK_USD_USD_MD",
+					"factorName": "USD Interbank Curve",
+					"tenorName": "365"
+				},
+				{
+					"valuePercentageChange": "0.974765",
+					"factorId": "CX_IRC_IBK_USD_USD_MD",
+					"factorName": "USD Interbank Curve",
+					"tenorName": "730"
+				},
+				{
+					"valuePercentageChange": "1.00147",
+					"factorId": "CX_IRC_IBK_USD_USD_MD",
+					"factorName": "USD Interbank Curve",
+					"tenorName": "1460"
+				},
+				{
+					"valuePercentageChange": "1.0122",
+					"factorId": "CX_IRC_IBK_USD_USD_MD",
+					"factorName": "USD Interbank Curve",
+					"tenorName": "3650"
+				}
+			],
+			"tenors": [
+				{
+					"tenorName": "730",
+					"valuePercentageChange": 0.974765
+				},
+				{
+					"tenorName": "1460",
+					"valuePercentageChange": 1.00147
+				},
+				{
+					"tenorName": "365",
+					"valuePercentageChange": 0.996927
+				},
+				{
+					"tenorName": "3650",
+					"valuePercentageChange": 1.0122
+				}
+			]
+		},
+		{
+			"category": "FX",
+			"valuePercentageChange": 1.0138462222222222,
+			"all": [
+				{
+					"valuePercentageChange": "1.02839",
+					"factorId": "CX_FXC_AUD_USD_Spot",
+					"factorName": "AUD/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "AUD"
+				},
+				{
+					"valuePercentageChange": "1.02686",
+					"factorId": "CX_FXC_BRL_USD_Spot",
+					"factorName": "BRL/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "BRL"
+				},
+				{
+					"valuePercentageChange": "1.01567",
+					"factorId": "CX_FXC_CAD_USD_Spot",
+					"factorName": "CAD/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "CAD"
+				},
+				{
+					"valuePercentageChange": "1.00989",
+					"factorId": "CX_FXC_CHF_USD_Spot",
+					"factorName": "CHF/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "CHF"
+				},
+				{
+					"valuePercentageChange": "1.00556",
+					"factorId": "CX_FXC_EUR_USD_Spot",
+					"factorName": "EUR/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "EUR"
+				},
+				{
+					"valuePercentageChange": "1.01094",
+					"factorId": "CX_FXC_GBP_USD_Spot",
+					"factorName": "GBP/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "GBP"
+				},
+				{
+					"valuePercentageChange": "1.00002",
+					"factorId": "CX_FXC_HKD_USD_Spot",
+					"factorName": "HKD/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "HKD"
+				},
+				{
+					"valuePercentageChange": "0.988566",
+					"factorId": "CX_FXC_JPY_USD_Spot",
+					"factorName": "JPY/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "JPY"
+				},
+				{
+					"valuePercentageChange": "1.03872",
+					"factorId": "CX_FXC_RUB_USD_Spot",
+					"factorName": "RUB/USD Rate",
+					"baseCurrency": "USD",
+					"targetCurrency": "RUB"
+				}
+			]
+		},
+		{
+			"category": "Macroeconomic",
+			"valuePercentageChange": 1.0271063333333332,
+			"all": [
+				{
+					"valuePercentageChange": "1.03529",
+					"factorId": "CX_COS_EN_BrentCrude_IFEU",
+					"factorName": "Spot Price of Brent Crude Oil"
+				},
+				{
+					"valuePercentageChange": "0.987429",
+					"factorId": "CX_COS_ME_Gold_XCEC",
+					"factorName": "Spot Price of Gold"
+				},
+				{
+					"valuePercentageChange": "1.0586",
+					"factorId": "CX_COS_EN_WTICrude_IFEU",
+					"factorName": "Spot Price of WTI Crude"
+				}
+			]
+		}
+	],
+	"assets": [
+		{
+			"instrumentName": "CX_US031162BG42_USD",
+			"issuerName": "Amgen INC",
+			"sectorName": "Health Care",
+			"assetClassName": "US Corporate",
+			"quantity": "10",
+			"currentValue": 105.6456,
+			"predictedValue": 105.6798,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US031162BK53_USD",
+			"issuerName": "Amgen Inc",
+			"sectorName": "Health Care",
+			"assetClassName": "US Corporate",
+			"quantity": "30",
+			"currentValue": 108.822,
+			"predictedValue": 109.0251,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US03232PAD06_USD",
+			"issuerName": "Envision Healthcare Corp (Delaware}",
+			"sectorName": "Health Care",
+			"assetClassName": "US Corporate",
+			"quantity": "50",
+			"currentValue": 104,
+			"predictedValue": 104.044,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US032511BM81_USD",
+			"issuerName": "Anadarko Petroluem Corporation",
+			"sectorName": "Energy",
+			"assetClassName": "US Corporate",
+			"quantity": "40",
+			"currentValue": 107.4313,
+			"predictedValue": 107.3807,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US032654AN54_USD",
+			"issuerName": "Analog Devices Inc",
+			"sectorName": "Technology",
+			"assetClassName": "US Corporate",
+			"quantity": "30",
+			"currentValue": 99.5753,
+			"predictedValue": 99.4941,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US035242AJ52_USD",
+			"issuerName": "Anheuser-Busch Inbev Finance Inc.",
+			"sectorName": "Consumer Non-cyclical",
+			"assetClassName": "US Corporate",
+			"quantity": "20",
+			"currentValue": 101.0585,
+			"predictedValue": 101.1667,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US035242AL09_USD",
+			"issuerName": "Anheuser-Busch Inbev Finance Inc.",
+			"sectorName": "Consumer Non-cyclical",
+			"assetClassName": "US Corporate",
+			"quantity": "10",
+			"currentValue": 101.9127,
+			"predictedValue": 102.1584,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US459200JR30_USD",
+			"issuerName": "International Business Machines Co",
+			"sectorName": "Technology",
+			"assetClassName": "US Corporate",
+			"quantity": "50",
+			"currentValue": 100.744,
+			"predictedValue": 100.598,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US4592001014_NYQ",
+			"issuerName": "International Business Machines Co",
+			"sectorName": "Technology",
+			"assetClassName": "US Corporate",
+			"quantity": "10",
+			"currentValue": 179.82,
+			"predictedValue": 179.82,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US00772BAM37_USD",
+			"issuerName": "Aercap Ireland Capital Ltd",
+			"sectorName": "Finance Companies",
+			"assetClassName": "US Corporate",
+			"quantity": "25",
+			"currentValue": 108.5,
+			"predictedValue": 108.6567,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US00817YAU29_USD",
+			"issuerName": "Aetna Inc",
+			"sectorName": "Health Care",
+			"assetClassName": "US Corporate",
+			"quantity": "5",
+			"currentValue": 100.98,
+			"predictedValue": 100.9648,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US00817YAW84_USD",
+			"issuerName": "Aetna Inc",
+			"sectorName": "Health Care",
+			"assetClassName": "US Corporate",
+			"quantity": "30",
+			"currentValue": 101.03,
+			"predictedValue": 100.9914,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US594918AQ78_USD",
+			"issuerName": "Microsoft Corp",
+			"sectorName": "Technology",
+			"assetClassName": "US Corporate",
+			"quantity": "30",
+			"currentValue": 97.8364,
+			"predictedValue": 97.7601,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US35906AAL26_USD",
+			"issuerName": "Frontier Communications Corp",
+			"sectorName": "Communications",
+			"assetClassName": "US Corporate",
+			"quantity": "40",
+			"currentValue": 105.375,
+			"predictedValue": 105.1187,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US35906AAN81_USD",
+			"issuerName": "Frontier Communications Corp",
+			"sectorName": "Communications",
+			"assetClassName": "US Corporate",
+			"quantity": "10",
+			"currentValue": 89.25,
+			"predictedValue": 89.0557,
+			"currency": "USD"
+		},
+		{
+			"instrumentName": "CX_US31428XAY22_USD",
+			"issuerName": "Fedex Corp",
+			"sectorName": "Transportation",
+			"assetClassName": "US Corporate",
+			"quantity": "20",
+			"currentValue": 106.152,
+			"predictedValue": 106.4876,
+			"currency": "USD"
+		}
+	]
+}

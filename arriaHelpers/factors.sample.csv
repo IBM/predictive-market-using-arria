@@ -1,0 +1,55 @@
+﻿FACTOR_ID,FACTOR_NAME,CATEGORY,KEY_FACTOR,KEY_FACTOR_CORREL,KEY_FACTOR_SCENARIO,HAS_TENOR,TENOR,PORTFOLIO_FACTOR,RATING,SECTOR,REGION
+CX_CSC_RSD_SEN_BNK_AA_MD,Bank AA,Credit Spread,1,,,TRUE,1460,FALSE,AA,Bank,
+CX_CSC_RSD_SEN_BNK_BBB_MD,Bank BBB,Credit Spread,1,,,TRUE,1460,TRUE,BBB,Bank,
+CX_CSC_RSD_SEN_BNK_CCC_MD,Bank CCC,Credit Spread,1,,,TRUE,1460,FALSE,CCC,Bank,
+CX_CSC_RSD_SEN_BMK_AA_MD,Benchmark AA,Credit Spread,1,,,TRUE,1460,FALSE,AA,Benchmark,
+CX_CSC_RSD_SEN_BMK_BBB_MD,Benchmark BBB,Credit Spread,1,,,TRUE,1460,FALSE,BBB,Benchmark,
+CX_CSC_RSD_SEN_BMK_CCC_MD,Benchmark CCC,Credit Spread,1,,,TRUE,1460,FALSE,CCC,Benchmark,
+CX_CSC_RSD_SEN_CPG_AA_MD,Capital Goods AA,Credit Spread,1,,,TRUE,1460,FALSE,AA,Capital Goods,
+CX_CSC_RSD_SEN_CPG_BBB_MD,Capital Goods BBB,Credit Spread,1,,,TRUE,1460,FALSE,BBB,Capital Goods,
+CX_CSC_RSD_SEN_CPG_CCC_MD,Capital Goods CCC,Credit Spread,1,,,TRUE,1460,FALSE,CCC,Capital Goods,
+CX_CSC_RSD_SEN_ENE_AA_MD,Energy AA,Credit Spread,1,,,TRUE,1460,FALSE,AA,Energy,
+CX_CSC_RSD_SEN_ENE_BBB_MD,Energy BBB,Credit Spread,1,,,TRUE,1460,FALSE,BBB,Energy,
+CX_CSC_RSD_SEN_ENE_CCC_MD,Energy CCC,Credit Spread,1,,,TRUE,1460,FALSE,CCC,Energy,
+CX_CSC_RSD_SEN_SVC_AA_MD,Software and Services AA,Credit Spread,1,,,TRUE,1460,TRUE,AA,Software and Services,
+CX_CSC_RSD_SEN_SVC_BBB_MD,Software and Services BBB,Credit Spread,1,,,TRUE,1460,FALSE,BBB,Software and Services,
+CX_CSC_RSD_SEN_SVC_CCC_MD,Software and Services CCC,Credit Spread,1,,,TRUE,1460,FALSE,CCC,Software and Services,
+CX_CSC_RSD_SEN_TEL_AA_MD,Telecommunications AA,Credit Spread,1,,,TRUE,1460,FALSE,AA,Telecommunications,
+CX_CSC_RSD_SEN_TEL_BBB_MD,Telecommunications BBB,Credit Spread,1,,,TRUE,1460,FALSE,BBB,Telecommunications,
+CX_CSC_RSD_SEN_TEL_CCC_MD,Telecommunications CCC,Credit Spread,1,,,TRUE,1460,FALSE,CCC,Telecommunications,
+CX_CSC_RSD_SEN_TRA_AA_MD,Transportation AA,Credit Spread,1,,,TRUE,1460,FALSE,AA,Transportation,
+CX_CSC_RSD_SEN_TRA_BBB_MD,Transportation BBB,Credit Spread,1,,,TRUE,1460,FALSE,BBB,Transportation,
+CX_CSC_RSD_SEN_TRA_CCC_MD,Transportation CCC,Credit Spread,1,,,TRUE,1460,FALSE,CCC,Transportation,
+CX_CSC_RSD_SEN_UTL_AA_MD,Utility Power AA,Credit Spread,1,,,TRUE,1460,FALSE,AA,Utility Power,
+CX_CSC_RSD_SEN_UTL_BBB_MD,Utility Power BBB,Credit Spread,1,,,TRUE,1460,FALSE,BBB,Utility Power,
+CX_CSC_RSD_SEN_UTL_CCC_MD,Utility Power CCC,Credit Spread,1,,,TRUE,1460,FALSE,CCC,Utility Power,
+CX_FXC_AUD_USD_Spot,AUD/USD Rate,FX,1,,,FALSE,,FALSE,,,
+CX_FXC_BRL_USD_Spot,BRL/USD Rate,FX,1,,,FALSE,,FALSE,,,
+CX_FXC_CAD_USD_Spot,CAD/USD Rate,FX,1,,,FALSE,,FALSE,,,
+CX_FXC_CHF_USD_Spot,CHF/USD Rate,FX,1,,,FALSE,,FALSE,,,
+CX_FXC_EUR_USD_Spot,EUR/USD Rate,FX,1,,,FALSE,,FALSE,,,
+CX_FXC_GBP_USD_Spot,GBP/USD Rate,FX,1,,,FALSE,,FALSE,,,
+CX_FXC_HKD_USD_Spot,HKD/USD Rate,FX,1,,,FALSE,,FALSE,,,
+CX_FXC_JPY_USD_Spot,JPY/USD Rate,FX,1,,,FALSE,,FALSE,,,
+CX_FXC_RUB_USD_Spot,RUB/USD Rate,FX,1,,,FALSE,,FALSE,,,
+CX_EQI_AUSX_Sydney_BMK_AUD_LargeCap_Price,ASX All Ordinaries Index,Index,1,,,FALSE,,FALSE,,,Asia Pacific
+CX_EQI_NYSE_CAC40_BMK_EUR_LargeCap_Price,CAC 40 Index,Index,1,,,FALSE,,FALSE,,,North America
+CX_EQI_SPDJ_USA_BMK_USD_LargeCap_Price,CBOE Market Volatility Index,Index,1,,,FALSE,,FALSE,,,North America
+CX_EQI_STOX_Euro_BMK_EUR_MidCap_Price,EURO STOXX Mid EUR Price Index,Index,1,,,FALSE,,FALSE,,,Europe
+CX_EQI_FTSE_UK_BMK_GBP_LargeCap_Price,FTSE 100 Index,Index,1,,,FALSE,,FALSE,,,United Kingdom
+CX_EQI_HSNG_Asia_BMK_HKD_LargeCap_Price,Hang Seng Index,Index,1,,,FALSE,,FALSE,,,Asia Pacific
+CX_EQI_NASD_USA100_BMK_USD_LargeCap_Price,NASDAQ 100 Index,Index,1,,,FALSE,,FALSE,,,North America
+CX_EQI_NIKK_Asia_BMK_JPY_LargeCap_Price,Nikkei 225 Index,Index,1,,,FALSE,,FALSE,,,Asia Pacific
+CX_EQI_SPDJ_USA500TotalReturn_BMK_USD_LargeCap_Gross,S&P 500 Index,Index,1,,,FALSE,,FALSE,,,North America
+CX_EQI_SPDJ_USA500_BMK_USD_LargeCap_Price,S&P 500 Index,Index,1,,,FALSE,,FALSE,,,North America
+CX_EQI_NYSE_USA_BMK_USD_LargeCap_Price,NYSE MKT Composite Index,Index,1,,,FALSE,,FALSE,,,North America
+CX_EQI_NASD_USAComposite_BMK_USD_LargeCap_Price,NASDAQ Composite Index,Index,1,,,FALSE,,FALSE,,,North America
+CX_EQI_BMFX_SaoPaulo_BMK_BRL_LargeCap_TotalReturn,Sao Paulo SE Bovespa Index,Index,1,,,FALSE,,FALSE,,,South America
+CX_EQI_SPDJ_Toronto_BMK_CAD_LargeCap_Price,TSX-Toronto Stock Exchange 300 Composite Index,Index,1,,,FALSE,,FALSE,,,North America
+CX_COS_EN_BrentCrude_IFEU,Spot Price of Brent Crude Oil,Macroeconomic,1,,,FALSE,,FALSE,,,
+CX_COS_ME_Gold_XCEC,Spot Price of Gold,Macroeconomic,1,,,FALSE,,FALSE,,,
+CX_COS_EN_WTICrude_IFEU,Spot Price of WTI Crude,Macroeconomic,1,,,FALSE,,FALSE,,,
+CX_IRC_IBK_USD_USD_MD,USD Interbank Curve,Rates,1,,,TRUE,365,FALSE,,,
+CX_IRC_IBK_USD_USD_MD,USD Interbank Curve,Rates,1,,,TRUE,730,FALSE,,,
+CX_IRC_IBK_USD_USD_MD,USD Interbank Curve,Rates,1,,,TRUE,1460,FALSE,,,
+CX_IRC_IBK_USD_USD_MD,USD Interbank Curve,Rates,1,,,TRUE,3650,FALSE,,,

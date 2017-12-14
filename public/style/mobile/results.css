@@ -1,0 +1,148 @@
+#results {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 100vw;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100vw;  
+}
+
+#results > .header {
+  background-color: #1d3649;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  height: 56px;
+}
+
+#results > .header > button {
+  -webkit-appearance: none;
+  background: none;
+  background-image: url( /img/back.arrow.svg );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border: none;
+  border-radius: 0;
+  height: 56px;
+  margin: 0;
+  opacity: 0.80;
+  outline: none;
+  padding: 0;
+  width: 40px;
+}
+
+#results > .header > p {
+  color: rgba( 255, 255, 255, 0.80 );
+  font-size: 16px;
+  line-height: 56px;
+  margin: 0;
+  padding: 0;
+}
+
+#results > .content {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+#results > .content > div {
+  bottom: 0;
+  left: 100vw;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+#results > .content > div:first-of-type {
+  left: 0;
+  -webkit-overflow-scrolling: touch;        
+  overflow-y: scroll;  
+}
+
+/* Columns */
+#change > .columns > p:nth-of-type( 1 ) {
+  flex-grow: 1;
+  text-align: left;
+}
+
+#change > .columns > p:nth-of-type( 2 ) {
+  text-align: right;
+  width: 60px;
+}
+
+/* Rows */
+#change > .list > .row > p:nth-of-type( 1 ) {
+  flex-grow: 1;
+  text-align: left;
+}
+
+#change > .list > .row > p:nth-of-type( 2 ) {
+  text-align: right;
+  width: 60px;
+}
+
+/* Columns */
+#table > .columns > p:nth-of-type( 1 ) {
+  flex-grow: 1;
+  text-align: left;
+}
+
+#table > .columns > p:nth-of-type( 2 ) {
+  text-align: right;
+  width: 80px;
+}
+
+#table > .columns > p:nth-of-type( 3 ) {
+  text-align: right;
+  width: 65px;
+}
+
+#table > .columns > p:nth-of-type( 4 ) {
+  text-align: right;
+  width: 60px;
+}
+
+/* Groups */
+#table > .list > .group > p:nth-of-type( 1 ) {
+  flex-grow: 1;
+  text-align: left;
+}
+
+#table > .list > .group > p:nth-of-type( 2 ) {
+  text-align: right;
+  width: 80px;
+}
+
+#table > .list > .group > p:nth-of-type( 3 ) {
+  text-align: right;
+  width: 65px;
+}
+
+#table > .list > .group > p:nth-of-type( 4 ) {
+  text-align: right;
+  width: 60px;
+}
+
+/* Rows */
+#table > .list > .row > p:nth-of-type( 1 ) {
+  flex-grow: 1;
+  text-align: left;
+}
+
+#table > .list > .row > p:nth-of-type( 2 ) {
+  text-align: right;
+  width: 80px;
+}
+
+#table > .list > .row > p:nth-of-type( 3 ) {
+  text-align: right;
+  width: 65px;
+}
+
+#table > .list > .row > p:nth-of-type( 4 ) {
+  text-align: right;
+  width: 60px;
+}

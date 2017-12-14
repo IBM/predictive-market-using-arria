@@ -1,0 +1,125 @@
+{
+  "timestamp": "2017-06-07T19:53:56.830Z",
+  "holdings": [
+    {
+      "asset": "Amgen Inc",
+      "quantity": "10",
+      "instrumentId": "CX_US031162BG42_USD",
+      "companyName": "Amgen Inc",
+      "sectorName": "Health Care",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "Amgen Inc",
+      "quantity": "30",
+      "instrumentId": "CX_US031162BK53_USD",
+      "companyName": "AMGEN INC",
+      "sectorName": "Health Care",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "Envision Healthcare Corp",
+      "quantity": "50",
+      "instrumentId": "CX_US03232PAD06_USD",
+      "companyName": "Envision Healthcare Corp",
+      "sectorName": "Health Care",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "Anadarko Petroleum Corp",
+      "quantity": "40",
+      "instrumentId": "CX_US032511BM81_USD",
+      "companyName": "Anadarko Petroleum Corp",
+      "sectorName": "Energy",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "Analog Devices Inc",
+      "quantity": "30",
+      "instrumentId": "CX_US032654AN54_USD",
+      "companyName": "Analog Devices Inc",
+      "sectorName": "Technology",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "Anheuser-Busch Inbev Finance Inc",
+      "quantity": "20",
+      "instrumentId": "CX_US035242AJ52_USD",
+      "companyName": "Anheuser-Busch Inbev Finance Inc",
+      "sectorName": "Consumer Non-cyclical",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "Anheuser-Busch Inbev Finance Inc",
+      "quantity": "10",
+      "instrumentId": "CX_US035242AL09_USD",
+      "companyName": "Anheuser-Busch Inbev Finance Inc",
+      "sectorName": "Consumer Non-cyclical",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "International Business Machines Corp",
+      "quantity": "10",
+      "instrumentId": "CX_US4592001014_NYQ",
+      "companyName": "IBM",
+      "sectorName": "Technology",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "Aercap Ireland Ltd",
+      "quantity": "25",
+      "instrumentId": "CX_US00772BAM37_USD",
+      "companyName": "Aercap Ireland Ltd",
+      "sectorName": "Finance Companies",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "Aetna Inc",
+      "quantity": "5",
+      "instrumentId": "CX_US00817YAU29_USD",
+      "companyName": "Aetna Inc",
+      "sectorName": "Health Care",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "Aetna Inc",
+      "quantity": "30",
+      "instrumentId": "CX_US00817YAW84_USD",
+      "companyName": "Aetna Inc",
+      "sectorName": "Health Care",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "Microsoft Corp",
+      "quantity": "30",
+      "instrumentId": "CX_US594918AQ78_USD",
+      "companyName": "Microsoft Corp",
+      "sectorName": "Technology",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "Frontier Communications Corp",
+      "quantity": "40",
+      "instrumentId": "CX_US35906AAL26_USD",
+      "companyName": "Frontier Communications Corp",
+      "sectorName": "Communications",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "Frontier Communications Corp",
+      "quantity": "10",
+      "instrumentId": "CX_US35906AAN81_USD",
+      "companyName": "Frontier Communications Corp",
+      "sectorName": "Communications",
+      "assetName": "US Corporate"
+    },
+    {
+      "asset": "Fedex Corp",
+      "quantity": "20",
+      "instrumentId": "CX_US31428XAY22_USD",
+      "companyName": "Fedex Corp",
+      "sectorName": "Transportation",
+      "assetName": "US Corporate"
+    }
+  ]
+}

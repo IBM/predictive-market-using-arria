@@ -1,0 +1,91 @@
+#change {
+  padding-top: 25px;
+  width: 75%;
+}
+
+#change > .columns {
+  border-bottom: 1px solid rgba( 0, 0, 0, 0.12 );     
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0 16px 0 16px;
+}
+
+ #change > .columns > .cell {
+  color: #0b8571;
+  font-size: 12px;
+  font-weight: 600;
+  height: 56px;
+  line-height: 56px;
+  margin: 0;
+  padding: 0;
+}
+
+#change > .group {
+  -webkit-appearance: none;
+  background:  none;
+  background-color: #eeeeee;    
+  background-image: url( ../img/drop.arrow.svg );
+  background-position: 8px center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border: none;
+  border-bottom: 1px solid rgba( 0, 0, 0, 0.12 );   
+  border-radius: 0;
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+  outline: 0;
+  margin: 0;
+  opacity: 1;
+  padding: 0 16px 0 40px;
+  width: 100%;
+}
+
+#change > .row {
+  border-bottom: 1px solid rgba( 0, 0, 0, 0.12 ) ; 
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0 16px 0 16px;
+}
+
+#change > .row:last-of-type {
+  border-bottom: none;
+}
+
+#change > .row.template {
+  display: none;
+}
+ 
+#change .cell {
+  color: rgba( 0, 0, 0, 0.87 );
+  font-size: 13px;
+  height: 48px;
+  line-height: 48px;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+}
+
+/* Columns */
+#change > .columns > p:nth-of-type( 1 ) {
+  flex-grow: 1;
+  text-align: left;
+}
+
+#change > .columns > p:nth-of-type( 2 ) {
+  text-align: right;
+  width: 60px;
+}
+
+/* Rows */
+#change > .row > p:nth-of-type( 1 ) {
+  flex-grow: 1;
+  text-align: left;
+}
+
+#change > .row > p:nth-of-type( 2 ) {
+  text-align: right;
+  width: 60px;
+}

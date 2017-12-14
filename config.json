@@ -1,0 +1,31 @@
+{
+	"login": {
+		"email": "cg@ibm.com",
+		"password": "password"
+  },
+  "portfolio": {
+    "url": "https://investment-portfolio.mybluemix.net/",
+    "writer": {
+      "userid": "ssinsednedpelyingembehem",
+      "password": "41911ae7bbda5f2533f7a6881d6453115c85b373"
+    },
+    "reader": {
+      "userid": "poodounduaryingengnatind",
+      "password": "eabdbf89a40f746dfda350b1aff4e7b85ce08707"
+    }
+  },
+  "predictive": {
+    "url": "https://fss-analytics.mybluemix.net/",
+    "token": "50ff89341a559165b5eb9e0ca52177bfcdf466d8c8001a6704060089b8ad68978409fe7952a4fbeb8a9ca62f78f8e0368a20367117cbfbad7679ad58ac684436a7e79cf5ca46709d0de09aedfe9c85ddc33fcbadffb1aa1c3cab4c3b41acffacceb6b72e861427910e18a817526a5e938bac0d7577b483b0a56c9ddcf0ecaff1"
+  },
+  "instrument": {
+    "url": "https://fss-analytics.mybluemix.net/",
+    "token": "429c921beaa9033b109e3f35da9b0510bf18546f45c3b42fcaf5844940add205943b9c855b9771d149c04111ef5bb33a3a1287d2ae6114f98a2ec33e3da809fdacf06282b8821e36585ddd8b77085b93acddc56935eea772b5dce2292d3905d9325c9e514641fd6f6d72f04a3384f9db2b233a86431d965ac8b1d9040766a026"    
+  },
+	"arria": {
+		"url": "https://stresstesting-narrativeapi.arria.com/services/rest/fullnarrative",
+		"key": "EFA59A4307A93530",
+		"factors": "factors.csv",
+		"vcv": "vcv.csv"
+	}
+}

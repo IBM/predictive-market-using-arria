@@ -1,0 +1,108 @@
+::-webkit-input-placeholder {
+  color: rgba( 255, 255, 255, 0.40 );
+}
+
+body {
+  background-image: url( /img/city.jpg );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+  color: rgba( 0, 0, 0, 0.87 );
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;    
+  margin: 0;
+  overflow: hidden;
+  padding: 0;  
+}
+
+button {
+  -webkit-appearance: none;
+  background-color: white;
+  border: none;
+  border-radius: 2px;
+  color: #1d3649;
+  font-family: 'Open Sans', sans-serif;  
+  font-size: 16px;
+  height: 45px;
+  margin: 50px 0 0 0;
+  opacity: 0.40;
+  outline: none;
+  transition: opacity 0.30s;
+  width: 100%;
+}
+
+button.loading {
+  background-image: url( /img/spinner.svg );
+  background-position: 16px center;
+  background-repeat: no-repeat;
+  background-size: 32px;
+}
+
+button.valid {
+  opacity: 0.80;
+}
+
+input {
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  border-bottom: dotted 1px rgba( 255, 255, 255, 0.60 );  
+  border-radius: 0;
+  box-shadow: none;
+  color: rgba( 255, 255, 255, 0.80 );
+  flex-grow: 1;
+  font-family: 'Open Sans', sans-serif;  
+  font-size: 16px;
+  height: 45px;
+  line-height: 45px;
+  margin: 0;
+  outline: none;
+  padding: 0 0 0 16px;
+}
+
+select {
+  -webkit-appearance: none;
+  background: none;
+  border: none;  
+  border-bottom: dotted 1px rgba( 255, 255, 255, 0.60 );    
+  border-radius: 0;
+  color: rgba( 255, 255, 255, 0.40 );
+  flex-grow: 1;
+  font-family: 'Open Sans', sans-serif;  
+  font-size: 16px;
+  height: 45px;
+  line-height: 45px;  
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 0 0 16px;
+  text-overflow: ellipsis;  
+  width: 190px;
+}
+
+select.valid {
+  color: rgba( 255, 255, 255, 0.80 );
+}
+
+#arria {
+  bottom: 8px;
+  position: absolute;
+  left: 8px;
+}
+
+#ibm {
+  bottom: 8px;
+  position: absolute;
+  right: 8px;
+}
+
+#shelf {
+  background-color: #fafafa;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 125px;
+  top: 0;
+  width: 100vw;
+}

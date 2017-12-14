@@ -1,0 +1,9 @@
+#progress {
+  background-color: #0b8571;   
+  bottom: 0;  
+  height: 0;   
+  left: 0;  
+  position: absolute; 
+  transition: width 0.60s, height 0.60s;
+  width: 0;
+}

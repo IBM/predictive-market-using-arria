@@ -1,0 +1,31 @@
+{
+	"login": {
+		"email": "cg@ibm.com",
+		"password": "password"
+  },
+  "portfolio": {
+    "url": "",
+    "writer": {
+      "userid": "",
+      "password": ""
+    },
+    "reader": {
+      "userid": "",
+      "password": ""
+    }
+  },
+  "predictive": {
+    "url": "",
+    "token": ""
+  },
+  "instrument": {
+    "url": "",
+    "token": ""    
+  },
+	"arria": {
+		"url": "",
+		"key": "",
+		"factors": "factors.csv",
+		"vcv": "vcv.csv"
+	}
+}

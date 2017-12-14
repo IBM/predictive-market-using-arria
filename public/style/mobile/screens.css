@@ -1,0 +1,9 @@
+#screens {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: margin-left 0.60s;  
+}
