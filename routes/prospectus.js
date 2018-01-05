@@ -14,7 +14,7 @@ var router = express.Router();
 // Generate text content
 router.post( '/arria', function( req, res ) {
   console.log('getting narrative');
-  
+
   var csv = req.body.model;
   var keyFactorsReadStream = fs.createReadStream('factors.csv');
   var modelReadStream = fs.createReadStream(csv);
@@ -35,7 +35,7 @@ router.post( '/arria', function( req, res ) {
             url: req.config.arria.url,
             headers: {
                 'content-type': 'application/json',
-                'x-api-key': req.config.arria.key   
+                'x-api-key': req.config.arria.key
             },
             body: extract,
             json: true
@@ -48,7 +48,7 @@ router.post( '/arria', function( req, res ) {
         console.log(err);
     });
 
-  
+
 } );
 
 // List holdings
@@ -59,12 +59,12 @@ router.get( '/holdings', function( req, res ) {
     url: req.config.portfolio.url + 'api/v1/portfolios/' + req.query.portfolio + '/holdings',
     auth: {
       username: req.config.portfolio.reader.userid,
-      password: req.config.portfolio.reader.password    
+      password: req.config.portfolio.reader.password
     },
     headers: {
       'Content-Type': 'application/json'
     },
-    qs: { latest: 'true' },   
+    qs: { latest: 'true' },
   } ).then( function( body ) {
     res.send( body );
   } ).catch( function( err ) {
@@ -82,7 +82,7 @@ router.post( '/holdings', function( req, res ) {
       url: req.config.portfolio.url + 'api/v1/portfolios/' + req.body.portfolio + '/holdings',
       auth: {
         username: req.config.portfolio.writer.userid,
-        password: req.config.portfolio.writer.password    
+        password: req.config.portfolio.writer.password
       },
       json: {
         timestamp: data.timestamp,
@@ -103,16 +103,16 @@ router.delete( '/holdings', function( req, res ) {
     url: req.config.portfolio.url + 'api/v1/portfolios/' + req.query.portfolio + '/holdings',
     auth: {
       username: req.config.portfolio.reader.userid,
-      password: req.config.portfolio.reader.password    
-    }    
+      password: req.config.portfolio.reader.password
+    }
   } ).then( function( body ) {
     var data = JSON.parse( body );
-    var url = 
-      req.config.portfolio.url + 
-      'api/v1/portfolios/' + 
-      req.query.portfolio + 
-      '/holdings/' + 
-      data.holdings[0].timestamp + 
+    var url =
+      req.config.portfolio.url +
+      'api/v1/portfolios/' +
+      req.query.portfolio +
+      '/holdings/' +
+      data.holdings[0].timestamp +
       '?rev=' +
       data.holdings[0]._rev;
 
@@ -121,8 +121,8 @@ router.delete( '/holdings', function( req, res ) {
       url: url,
       auth: {
         username: req.config.portfolio.writer.userid,
-        password: req.config.portfolio.writer.password    
-      }    
+        password: req.config.portfolio.writer.password
+      }
     } );
   } ).then( function( body ) {
     res.send( body );
@@ -134,9 +134,9 @@ router.delete( '/holdings', function( req, res ) {
 router.post( '/instrument', function( req, res ) {
   console.log('simulate instruments');
   var instruments = [];
-  
+
   for( var h = 0; h < req.body.holdings.length; h++ ) {
-    instruments.push( req.body.holdings[h].instrumentId );      
+    instruments.push( req.body.holdings[h].instrumentId );
   }
 
   request( {
@@ -144,7 +144,7 @@ router.post( '/instrument', function( req, res ) {
     url: req.config.instrument.url + 'api/v1/scenario/instruments',
     headers: {
       'X-IBM-Access-Token': req.config.instrument.token
-    },      
+    },
     formData: {
       scenario_file: fs.createReadStream( req.body.model ),
       instruments: instruments.join( ',' )
@@ -152,7 +152,7 @@ router.post( '/instrument', function( req, res ) {
   } ).then( function( body ) {
     console.log('updating holdings');
     let data = JSON.parse( body );
-    
+
     for( var h = 0; h < req.body.holdings.length; h++ ) {
       for( var i = 0; i < data.length; i++ ) {
         if( req.body.holdings[h].instrumentId == data[i].instrument ) {
@@ -168,14 +168,14 @@ router.post( '/instrument', function( req, res ) {
         }
       }
     }
-    
+
     return fs.readFile( req.body.model, 'utf8' );
   } ).then( function( data ) {
     console.log('getting factor changes');
     let rows = data.split( '\n' );
     var cells = null;
     var conditions = [];
-    
+
     for( var r = 1; r < rows.length; r++ ) {
       let cells = rows[r].split( ',' );
 
@@ -194,9 +194,9 @@ router.post( '/instrument', function( req, res ) {
         }
       }
     }
-    // need this file for the next step, clean up later    
+    // need this file for the next step, clean up later
     //fs.unlink( req.body.model );
-    
+
     res.json( {
       holdings: req.body.holdings,
       conditions: conditions,
@@ -214,8 +214,8 @@ router.post( '/login', function( req, res ) {
 
   if( req.config.login.email == req.body.email && req.config.login.password == req.body.password ) {
     success = true;
-  }  
-  
+  }
+
   res.json( {
     success: success
   } );
@@ -225,19 +225,20 @@ router.post( '/login', function( req, res ) {
 router.get( '/portfolio', function( req, res ) {
   console.log('get portfolios');
   var hash = null;
-  
+
   // Request token
   request( {
     method: 'GET',
     url: req.config.portfolio.url + 'api/v1/portfolios',
     auth: {
       username: req.config.portfolio.reader.userid,
-      password: req.config.portfolio.reader.password    
+      password: req.config.portfolio.reader.password
     },
     headers: {
       'Content-Type': 'application/json'
     }
   } ).then( function( body ) {
+    console.log(body);
     res.send( body );
   } ).catch( function( err ) {
     console.log( err );
@@ -247,14 +248,14 @@ router.get( '/portfolio', function( req, res ) {
 // Create portfolio
 router.post( '/portfolio', function( req, res ) {
   var hash = null;
-  
+
   // Request token
   request( {
     method: 'POST',
     url: req.config.portfolio.url + 'api/v1/portfolios',
     auth: {
       username: req.config.portfolio.writer.userid,
-      password: req.config.portfolio.writer.password    
+      password: req.config.portfolio.writer.password
     },
     json: {
       name: 'Retirement Portfolio',
@@ -288,7 +289,7 @@ router.post( '/predict', function( req, res ) {
           risk_factor: req.body.risk,
           shock: req.body.shock
         }
-      }    
+      }
     } ).catch( retry );
   } ).then( function( body ) {
     csv = randomstring.generate() + '.csv';
@@ -299,7 +300,7 @@ router.post( '/predict', function( req, res ) {
     } );
   } ).catch( function( err ) {
     console.log( err );
-  } );  
+  } );
 } );
 
 // List risk factors
@@ -321,7 +322,7 @@ router.risk = [
   {CX_FXC_GBP_USD_Spot: 'GBP/USD  FX rate'},
   {CX_COS_EN_BrentCrude_IFEU: 'Spot Price of Brent Crude Oil'},
   {CX_COS_EN_WTICrude_IFEU: 'Spot Price of WTI Crude Oil'},
-  {CX_COS_ME_Gold_XCEC: 'Spot Price of Gold'}    
+  {CX_COS_ME_Gold_XCEC: 'Spot Price of Gold'}
 ];
 
 // Export
