@@ -17,7 +17,9 @@
     "request": "^2.78.0",
     "request-promise": "^4.2.2",
     "q": "^1.5.1",
-    "fast-csv": "^2.4.1"
+    "fast-csv": "^2.4.1",
+    "vcap_services": "^0.2.0",
+    "dotenv": "^4.0.0"
   },
   "repository": {},
   "engines": {
