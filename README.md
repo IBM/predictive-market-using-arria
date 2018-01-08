@@ -1,4 +1,4 @@
-# predictive-market-using-arria
+# Predictive Market Using Arria
 
 This Pattern demonstrates how to compute a stress test using the Predictive Market Scenario service and Simulated Instrument Analytics service on a set of investments maintained in the Investment Portfolio service, and then narrate the results using the Arria NLG service.
 
@@ -77,7 +77,7 @@ Create the following services in IBM Cloud:
 For the url provide: `https://stresstesting-narrativeapi.arria.com/services/rest/fullnarrative`
 
 <p align="left">
-  <img width="650" src="readme_images\arria_service.png">
+  <img width="850" src="readme_images\arria_service.png">
 </p>
 
 
@@ -196,13 +196,7 @@ cf push
 cf logs <application-name> --recent
 ```
 
-* If you are running locally - inspect your environment variables closely to confirm they match.  Try running each service as standalone:
-
-```bash
-python InvestmentPortfolio.py
-python PredictiveMarketScenario.py
-python SimulatedInstrumentAnalytics.py
-```
+* If you are running locally - inspect your environment variables closely to confirm they match. 
 
 # License
 
