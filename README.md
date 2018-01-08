@@ -22,7 +22,7 @@ When the reader has completed this journey, they will understand how to:
 
 # Automatically Deploying the Application to IBM Cloud
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/devops/setup/deploy?repository=https://github.com/IBM/predictive-market-using-arria.git)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/devops/setup/deploy?repository=https://github.com/raheelzubairy/predictive-market-using-arria.git)
 
 Be sure to [load investment portfolio](#4-load-investment-portfolio) before running the application.
 

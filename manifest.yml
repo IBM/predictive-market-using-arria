@@ -3,8 +3,8 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: arria-predictive-market
-  host: arria-predictive-market
+  name: predictive-market-using-arria
+  host: predictive-market-using-arria
   disk_quota: 256M
   buildpack: sdk-for-nodejs
   services:
