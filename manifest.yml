@@ -1,15 +1,13 @@
 declared-services:
-    Investment-Portfolio1:
+    Investment-Portfolio-new:
       label: fss-portfolio-service
       plan: fss-portfolio-service-free-plan
-    Predictive-Market-Scenarios1:
+    Predictive-Market-Scenarios-new:
       label: fss-predictive-scenario-analytics-service
       plan: fss-predictive-scenario-analytics-service-free-plan
-    Simulated-Instrument-Analytics1:
+    Simulated-Instrument-Analytics-new:
       label: fss-scenario-analytics-service
-      plan: fss-scenario-analytics-service-free-plan
-    Natural-Language-Generation-Arria1:
-      label: user-provided      
+      plan: fss-scenario-analytics-service-free-plan  
 applications:
 - path: .
   memory: 256M
@@ -20,7 +18,6 @@ applications:
   disk_quota: 256M
   buildpack: sdk-for-nodejs
   services:
-  - Investment-Portfolio1
-  - Predictive-Market-Scenarios1
-  - Simulated-Instrument-Analytics1
-  - Natural-Language-Generation-Arria1
+  - Investment-Portfolio-new
+  - Predictive-Market-Scenarios-new
+  - Simulated-Instrument-Analytics-new
