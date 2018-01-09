@@ -1,13 +1,26 @@
+declared-services:
+    Investment-Portfolio1:
+      label: fss-portfolio-service
+      plan: fss-portfolio-service-free-plan
+    Predictive-Market-Scenarios1:
+      label: fss-predictive-scenario-analytics-service
+      plan: fss-predictive-scenario-analytics-service-free-plan
+    Simulated-Instrument-Analytics1:
+      label: fss-scenario-analytics-service
+      plan: fss-scenario-analytics-service-free-plan
+    Natural-Language-Generation-Arria1:
+      label: user-provided      
 applications:
 - path: .
   memory: 256M
   instances: 1
-  name: predictive-market-using-arria
-  host: predictive-market-using-arria
+  domain: mybluemix.net
+  name: rz-arria-predictive-market-test
+  host: predictive-market-using-arria1
   disk_quota: 256M
   buildpack: sdk-for-nodejs
   services:
-  - Investment-Portfolio
-  - Predictive-Market-Scenarios
-  - Simulated-Instrument-Analytics
-  - Arria-NLG-1
+  - Investment-Portfolio1
+  - Predictive-Market-Scenarios1
+  - Simulated-Instrument-Analytics1
+  - Natural-Language-Generation-Arria1
