@@ -2,7 +2,6 @@ applications:
 - path: .
   memory: 256M
   instances: 1
-  domain: mybluemix.net
   name: predictive-market-using-arria
   host: predictive-market-using-arria
   disk_quota: 256M
