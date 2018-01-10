@@ -1,5 +1,8 @@
 require('dotenv').config();
 
+// Deployment tracking
+ +require('metrics-tracker-client').track();
+
 var cfenv = require( 'cfenv' );
 var express = require( 'express' );
 var jsonfile = require( 'jsonfile' );
@@ -20,7 +23,7 @@ config.arria.key = arriaCredentials.api_key||process.env.CRED_ARRIA_NATURAL_LANG
 config.arria.url = arriaCredentials.api_url||process.env.CRED_ARRIA_NATURAL_LANGUAGE_GENERATION_URL;
 
 //investment portfolio credentials
-var portfolioCredentials = vcapServices.getCredentials('fss-scenario-analytics-service');
+var portfolioCredentials = vcapServices.getCredentials('fss-portfolio-service');
 config.portfolio.url = portfolioCredentials.url||process.env.CRED_PORTFOLIO_URL;
 if (portfolioCredentials.reader) {
 	config.portfolio.reader.userid = portfolioCredentials.reader.userid;

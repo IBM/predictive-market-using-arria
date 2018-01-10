@@ -2,3 +2,7 @@ node_modules
 config.json
 config2.json
 /.vscode
+.env
+
+.DS_Store
+.DS_Store?

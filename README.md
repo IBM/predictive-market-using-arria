@@ -1,4 +1,4 @@
-# predictive-market-using-arria
+# Predictive Market Using Arria
 
 This Pattern demonstrates how to compute a stress test using the Predictive Market Scenario service and Simulated Instrument Analytics service on a set of investments maintained in the Investment Portfolio service, and then narrate the results using the Arria NLG service.
 
@@ -15,16 +15,16 @@ When the reader has completed this journey, they will understand how to:
 
 
 ## Included Components
-+ Bluemix Investment Portfolio
-+ Bluemix Predictive Market Scenario
-+ Bluemix Simulated Instrument Analytics
++ Investment Portfolio
++ Predictive Market Scenario
++ Simulated Instrument Analytics
 + Arria NLG
 
 # Automatically Deploying the Application to IBM Cloud
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/devops/setup/deploy?repository=https://github.com/IBM/predictive-market-using-arria.git)
 
-Be sure to [load investment portfolio](#4-load-investment-portfolio) before running the application.
+Be sure to [load investment portfolio](#5-load-investment-portfolio) before running the application.
 
 # Manually Deploying the Application to IBM Cloud
 Follow these steps to setup and run this pattern. The steps are described in detail below.
@@ -34,22 +34,37 @@ Follow these steps to setup and run this pattern. The steps are described in det
 - [npm](https://www.npmjs.com/)
 
 ## Steps
-1. [Clone the repo](#1-clone-the-repo)
-2. [Create Bluemix services](#2-create-bluemix-services)
-3. [Configure .env file](#3-configure-env-file)
-4. [Load Investment Portfolio](#4-load-investment-portfolio)
-5. [Run Application](#5-run-application)
-6. [Deploy to IBM Cloud](#6-deploy-to-ibm-cloud)
+1. [Create Arria account](#1-clone-the-repo)
+2. [Create IBM Cloud services](#2-create-ibm-cloud-services)
+3. [Clone the repo](#3-clone-the-repo)
+4. [Configure .env file](#4-configure-env-file)
+5. [Load Investment Portfolio](#5-load-investment-portfolio)
+6. [Run Application](#5-run-application)
+7. [Deploy to IBM Cloud](#6-deploy-to-ibm-cloud)
 
 
-## 1. Clone the repo
+# 1. Create Arria account
 
-Clone the `Predict Market Using Arria repo` locally. In a terminal, run:
+You will need Arria API key. Register for an Arria account [here](https://nlgapi.arria.com/#/register). Click `Get Started` to sign up for an account.
 
-  `$ git clone https://github.com/IBM/predictive-market-using-arria.git`
+<p align="left">
+  <img width="650" src="readme_images\arria_register.png">
+</p>
+
+After you have created your account, then login. Click `Your API Key`.  This will take you to your API key, which will be required in subsequent steps.
+
+<p align="left">
+  <img width="650" src="readme_images\arria_api_key.png">
+</p>
+
+Explore `Narrative APIs`. Here under `Portfolio Management`, find `Predictive Market Stress Testing`.
+
+<p align="left">
+  <img width="650" src="readme_images\arria_narratives.png">
+</p>
 
 
-## 2. Create Bluemix services
+## 2. Create IBM Cloud services
 
 Create the following services in IBM Cloud:
 
@@ -58,11 +73,21 @@ Create the following services in IBM Cloud:
 * [**Simulated Instrument Analytics**](https://console.ng.bluemix.net/catalog/services/simulated-instrument-analytics)
 * [**Arria Natural Language Generation APIs**](https://console.bluemix.net/catalog/services/natural-language-generation-apis)
 
-<br>For the `Arria Natural Language Generation API` service, you will need to register [here](https://nlgapi.arria.com/#/register).  Once registered, you will need to retrieve the API key. <br>
-For the url provide: 'https://stresstesting-narrativeapi.arria.com/services/rest/fullnarrative'
+<br>For the `Arria Natural Language Generation API` service in IBM Cloud you will need to provide your API Key from Arria.  </br>
+For the url provide: `https://stresstesting-narrativeapi.arria.com/services/rest/fullnarrative`
+
+<p align="left">
+  <img width="850" src="readme_images\arria_service.png">
+</p>
 
 
-## 3. Configure .env file
+## 3. Clone the repo
+
+Clone the `Predict Market Using Arria repo` locally. In a terminal, run:
+
+  `$ git clone https://github.com/IBM/predictive-market-using-arria.git`
+
+## 4. Configure .env file
 
 Create a `.env` file in the root directory of your clone of the project repository by copying the sample `.env.example` file using the following command:
 
@@ -72,7 +97,7 @@ Create a `.env` file in the root directory of your clone of the project reposito
 
   **NOTE** Most files systems regard files with a "." at the front as hidden files.  If you are on a Windows system, you should be able to use either [GitBash](https://git-for-windows.github.io/) or [Xcopy](https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/xcopy.mspx?mfr=true)
 
-You will need to update the credentials with the Bluemix credentials for each of the services you created in [Step 2](#2-create-bluemix-services).
+You will need to update the credentials with the Bluemix credentials for each of the services you created in [Step 2](#2-create-ibm-cloud-services).
 
 The `.env` file will look something like the following:
 
@@ -99,9 +124,9 @@ The `.env` file will look something like the following:
   CRED_ARRIA_NATURAL_LANGUAGE_GENERATION_VSV=vcv.csv
   ```
 
-## 4. Load Investment Portfolio
+## 5. Load Investment Portfolio
 
-You will now need to create a portfolio in your Investment Portfolio service and create holdings for that portfolio. The `holdings.sample.json` file provides you with sample holdings for a portfolio.  You can run the `investmentPortfolio.js` script to load portfolio and holdings.  The credentials are retrieved from `.env` file so ensure that your Investment Portfolio credentials are filled as per the [last step](#3-configure-env-file).
+You will now need to create a portfolio in your Investment Portfolio service and create holdings for that portfolio. The `holdings.sample.json` file provides you with sample holdings for a portfolio.  You can run the `investmentPortfolio.js` script to load portfolio and holdings.  The credentials are retrieved from `.env` file so ensure that your Investment Portfolio credentials are filled as per the [previous step](#4-configure-env-file).
 
 To load a portfolio named `MyFixedIncomePortfolio`, first install dependencies and use the command-line with the script to create the portfolio:
 ```
@@ -125,7 +150,7 @@ node investmentPortfolio.js -g MyFixedIncomePortfolio
 ```
 
 
-## 5. Run Application
+## 6. Run Application
 
 cd into this project's root directory
 + Run `npm install` to install the app's dependencies
@@ -133,7 +158,7 @@ cd into this project's root directory
 + Access the running app locally
 
 
-## 6. Deploy to IBM Cloud
+## 7. Deploy to IBM Cloud
 
 Edit the `manifest.yml` file in the folder that contains your code and replace with a unique name for your application. The name that you specify determines the application's URL, such as `your-application-name.mybluemix.net`. Additionally - update the service names so they match what you have in Bluemix. The relevant portion of the `manifest.yml` file looks like the following:
 
@@ -171,13 +196,31 @@ cf push
 cf logs <application-name> --recent
 ```
 
-* If you are running locally - inspect your environment variables closely to confirm they match.  Try running each service as standalone:
+* If you are running locally - inspect your environment variables closely to confirm they match.
 
-```bash
-python InvestmentPortfolio.py
-python PredictiveMarketScenario.py
-python SimulatedInstrumentAnalytics.py
-```
+# Privacy Notice
+
+Sample web applications that include this package may be configured to track deployments to [IBM Cloud](https://www.bluemix.net/) and other Cloud Foundry platforms. The following information is sent to a [Deployment Tracker](https://github.com/IBM/metrics-collector-service) service on each deployment:
+
+* Node.js package version
+* Node.js repository URL
+* Application Name (`application_name`)
+* Application GUID (`application_id`)
+* Application instance index number (`instance_index`)
+* Space ID (`space_id`) or OS username
+* Application Version (`application_version`)
+* Application URIs (`application_uris`)
+* Cloud Foundry API (`cf_api`)
+* Labels and names of bound services
+* Number of instances for each bound service and associated plan information
+* Metadata in the repository.yaml file
+
+This data is collected from the `package.json` and `repository.yaml` file in the sample application and the `VCAP_APPLICATION` and `VCAP_SERVICES` environment variables in IBM Cloud and other Cloud Foundry platforms. This data is used by IBM to track metrics around deployments of sample applications to IBM Cloud to measure the usefulness of our examples, so that we can continuously improve the content we offer to you. Only deployments of sample applications that include code to ping the Deployment Tracker service will be tracked.
+
+### Disabling Deployment Tracking
+
+Deployment tracking can be disabled by removing `require('metrics-tracker-client').track();` from the beginning of the `app.js` file at the root of this repository.
+
 
 # License
 
