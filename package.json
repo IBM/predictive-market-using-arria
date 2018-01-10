@@ -9,17 +9,18 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "cfenv": "^1.0.3",
+    "dotenv": "^4.0.0",
     "express": "^4.14.0",
     "fs-extra": "^4.0.2",
     "jsonfile": "^2.4.0",
+    "metrics-tracker-client": "^0.2.3",
     "promise-retry": "^1.1.1",
     "randomstring": "^1.1.5",
     "request": "^2.78.0",
     "request-promise": "^4.2.2",
     "q": "^1.5.1",
     "fast-csv": "^2.4.1",
-    "vcap_services": "^0.2.0",
-    "dotenv": "^4.0.0"
+    "vcap_services": "^0.2.0"
   },
   "repository": {},
   "engines": {

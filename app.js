@@ -1,5 +1,8 @@
 require('dotenv').config();
 
+// Deployment tracking
+ +require('metrics-tracker-client').track();
+
 var cfenv = require( 'cfenv' );
 var express = require( 'express' );
 var jsonfile = require( 'jsonfile' );
