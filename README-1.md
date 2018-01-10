@@ -20,10 +20,7 @@ When the reader has completed this journey, they will understand how to:
 + Simulated Instrument Analytics
 + Arria NLG
 
-
-
-
-
+# Automatically Deploying the Application to IBM Cloud
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/devops/setup/deploy?repository=https://github.com/raheelzubairy/predictive-market-using-arria.git)
 
@@ -32,22 +29,14 @@ Be sure to [load investment portfolio](#4-load-investment-portfolio) before runn
 # Manually Deploying the Application to IBM Cloud
 Follow these steps to setup and run this pattern. The steps are described in detail below.
 
-# Run the Application
-
 ## Prerequisite
 - [node](https://nodejs.org/en/)
 - [npm](https://www.npmjs.com/)
 
-## Initial Steps
-1. [Create Arria service](#2-clone-the-repo)
-2. Clone the repo
-3. [Load Investment Portfolio](#5-load-investment-portfolio)
-
-# Automatically Deploying the Application to IBM Cloud
-
-4. Deploy to
-
+## Steps
+1. [Create Arria account](#2-clone-the-repo)
 2. [Create Bluemix services](#3-create-bluemix-services)
+3. [Clone the repo](#1-clone-the-repo)
 4. [Configure .env file](#4-configure-env-file)
 5. [Load Investment Portfolio](#5-load-investment-portfolio)
 6. [Run Application](#5-run-application)
@@ -207,7 +196,7 @@ cf push
 cf logs <application-name> --recent
 ```
 
-* If you are running locally - inspect your environment variables closely to confirm they match.
+* If you are running locally - inspect your environment variables closely to confirm they match. 
 
 # License
 

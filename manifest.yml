@@ -7,13 +7,13 @@ declared-services:
       plan: fss-predictive-scenario-analytics-service-free-plan
     Simulated-Instrument-Analytics-new:
       label: fss-scenario-analytics-service
-      plan: fss-scenario-analytics-service-free-plan  
+      plan: fss-scenario-analytics-service-free-plan
 applications:
 - path: .
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: arria-predictive-market-test
+  name: predictive-market-arria
   host: predictive-market-using-arria2
   disk_quota: 256M
   buildpack: sdk-for-nodejs

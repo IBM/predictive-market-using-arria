@@ -1,7 +1,7 @@
 class Narrative {
     constructor() {
       this.root = document.getElementById('narrative');
-      
+
     }
 
     clear() {
@@ -18,7 +18,7 @@ class Narrative {
                 var text = document.createElement('div')
                 text.innerHTML=arriaNarrative.overview;
                 this.root.appendChild(header);
-                this.root.appendChild(text.firstChild);
+                this.appendAll(this.root, text.children);
             }
             if ('detailedAnalysis' in arriaNarrative){
                 var header = document.createElement('h1')
@@ -26,7 +26,7 @@ class Narrative {
                 var text = document.createElement('div')
                 text.innerHTML=arriaNarrative.detailedAnalysis;
                 this.root.appendChild(header);
-                this.root.appendChild(text.firstChild);
+                this.appendAll(this.root, text.children);
             }
             if ('marketChanges' in arriaNarrative){
                 var header = document.createElement('h1')
@@ -34,19 +34,26 @@ class Narrative {
                 var text = document.createElement('div')
                 text.innerHTML=arriaNarrative.marketChanges;
                 this.root.appendChild(header);
-                this.root.appendChild(text.firstChild);
+                this.appendAll(this.root, text.children);
+                //this.root.appendChild(text.firstChild);
             }
             if ('modelDetails' in arriaNarrative){
                 var header = document.createElement('h1')
                 header.innerHTML='Model Details';
                 var text = document.createElement('div')
                 text.innerHTML=arriaNarrative.modelDetails;
-                this.root.appendChild(header); 
-                this.root.appendChild(text.firstChild);
+                this.root.appendChild(header);
+                this.appendAll(this.root, text.children);
             }
-      
         } else {
           this.root.html(JSON.stringify(arriaNarrative  ));
+        }
+    }
+
+    // append supported in js but not IE
+    appendAll(parent, children){
+        while (children.length > 0){
+            parent.appendChild(children[0]);
         }
     }
 
