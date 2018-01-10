@@ -20,34 +20,23 @@ When the reader has completed this journey, they will understand how to:
 + Simulated Instrument Analytics
 + Arria NLG
 
-
-
-
-
+# Automatically Deploying the Application to IBM Cloud
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/devops/setup/deploy?repository=https://github.com/raheelzubairy/predictive-market-using-arria.git)
 
-Be sure to [load investment portfolio](#4-load-investment-portfolio) before running the application.
+Be sure to [load investment portfolio](#5-load-investment-portfolio) before running the application.
 
 # Manually Deploying the Application to IBM Cloud
 Follow these steps to setup and run this pattern. The steps are described in detail below.
-
-# Run the Application
 
 ## Prerequisite
 - [node](https://nodejs.org/en/)
 - [npm](https://www.npmjs.com/)
 
-## Initial Steps
-1. [Create Arria service](#2-clone-the-repo)
-2. Clone the repo
-3. [Load Investment Portfolio](#5-load-investment-portfolio)
-
-# Automatically Deploying the Application to IBM Cloud
-
-4. Deploy to
-
-2. [Create Bluemix services](#3-create-bluemix-services)
+## Steps
+1. [Create Arria account](#1-clone-the-repo)
+2. [Create IBM Cloud services](#2-create-ibm-cloud-services)
+3. [Clone the repo](#3-clone-the-repo)
 4. [Configure .env file](#4-configure-env-file)
 5. [Load Investment Portfolio](#5-load-investment-portfolio)
 6. [Run Application](#5-run-application)
@@ -108,7 +97,7 @@ Create a `.env` file in the root directory of your clone of the project reposito
 
   **NOTE** Most files systems regard files with a "." at the front as hidden files.  If you are on a Windows system, you should be able to use either [GitBash](https://git-for-windows.github.io/) or [Xcopy](https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/xcopy.mspx?mfr=true)
 
-You will need to update the credentials with the Bluemix credentials for each of the services you created in [Step 2](#2-create-bluemix-services).
+You will need to update the credentials with the Bluemix credentials for each of the services you created in [Step 2](#2-create-ibm-cloud-services).
 
 The `.env` file will look something like the following:
 
@@ -137,7 +126,7 @@ The `.env` file will look something like the following:
 
 ## 5. Load Investment Portfolio
 
-You will now need to create a portfolio in your Investment Portfolio service and create holdings for that portfolio. The `holdings.sample.json` file provides you with sample holdings for a portfolio.  You can run the `investmentPortfolio.js` script to load portfolio and holdings.  The credentials are retrieved from `.env` file so ensure that your Investment Portfolio credentials are filled as per the [last step](#3-configure-env-file).
+You will now need to create a portfolio in your Investment Portfolio service and create holdings for that portfolio. The `holdings.sample.json` file provides you with sample holdings for a portfolio.  You can run the `investmentPortfolio.js` script to load portfolio and holdings.  The credentials are retrieved from `.env` file so ensure that your Investment Portfolio credentials are filled as per the [previous step](#4-configure-env-file).
 
 To load a portfolio named `MyFixedIncomePortfolio`, first install dependencies and use the command-line with the script to create the portfolio:
 ```
