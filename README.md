@@ -24,7 +24,22 @@ When the reader has completed this journey, they will understand how to:
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/devops/setup/deploy?repository=https://github.com/IBM/predictive-market-using-arria.git)
 
-Be sure to [load investment portfolio](#5-load-investment-portfolio) before running the application.
+You will need to [create Arria service](#1-create-arria-service) in IBM Cloud and then bind the Arria NLG service to your application.
+
+Go to your application page in IBM Cloud, under Connections choose `Create Connection`:
+
+<p align="left">
+  <img width="450" src="readme_images\create_connection.png">
+</p>
+
+Find your Arria Natural Language Generation service and choose `Connect`:
+
+<p align="left">
+  <img width="650" src="readme_images\connect_service.png">
+</p>
+
+Next, load investment portfolio before running the application. First [clone the repo](#3-clone-the-repo) and then use the `investmentPortfolio.js` script to [load your portfolio](#5-load-investment-portfolio).
+
 
 # Manually Deploying the Application to IBM Cloud
 Follow these steps to setup and run this pattern. The steps are described in detail below.
@@ -34,7 +49,7 @@ Follow these steps to setup and run this pattern. The steps are described in det
 - [npm](https://www.npmjs.com/)
 
 ## Steps
-1. [Create Arria account](#1-clone-the-repo)
+1. [Create Arria service](#1-create-arria-service)
 2. [Create IBM Cloud services](#2-create-ibm-cloud-services)
 3. [Clone the repo](#3-clone-the-repo)
 4. [Configure .env file](#4-configure-env-file)
@@ -43,7 +58,7 @@ Follow these steps to setup and run this pattern. The steps are described in det
 7. [Deploy to IBM Cloud](#6-deploy-to-ibm-cloud)
 
 
-# 1. Create Arria account
+# 1. Create Arria service
 
 You will need Arria API key. Register for an Arria account [here](https://nlgapi.arria.com/#/register). Click `Get Started` to sign up for an account.
 
@@ -63,14 +78,8 @@ Explore `Narrative APIs`. Here under `Portfolio Management`, find `Predictive Ma
   <img width="650" src="readme_images\arria_narratives.png">
 </p>
 
+Next, create the Arria service in IBM Cloud.
 
-## 2. Create IBM Cloud services
-
-Create the following services in IBM Cloud:
-
-* [**Investment Portfolio**](https://console.ng.bluemix.net/catalog/services/investment-portfolio)
-* [**Predictive Market Scenario**](https://console.ng.bluemix.net/catalog/services/predictive-market-scenarios)
-* [**Simulated Instrument Analytics**](https://console.ng.bluemix.net/catalog/services/simulated-instrument-analytics)
 * [**Arria Natural Language Generation APIs**](https://console.bluemix.net/catalog/services/natural-language-generation-apis)
 
 <br>For the `Arria Natural Language Generation API` service in IBM Cloud you will need to provide your API Key from Arria.  </br>
@@ -79,6 +88,29 @@ For the url provide: `https://stresstesting-narrativeapi.arria.com/services/rest
 <p align="left">
   <img width="850" src="readme_images\arria_service.png">
 </p>
+
+
+## 2. Create IBM Cloud services
+
+Create the following services in IBM Cloud for financial services:
+
+* [**Investment Portfolio**](https://console.ng.bluemix.net/catalog/services/investment-portfolio)
+* [**Predictive Market Scenario**](https://console.ng.bluemix.net/catalog/services/predictive-market-scenarios)
+* [**Simulated Instrument Analytics**](https://console.ng.bluemix.net/catalog/services/simulated-instrument-analytics)
+
+For each service, go to `service credentials` on the left tab. Select `New Credentials`
+
+<p align="left">
+  <img width="850" src="readme_images\find_credentials.png">
+</p>
+
+Choose a name for your credentials, click `Add`:
+
+<p align="left">
+  <img width="350" src="readme_images\add_credentials.png">
+</p>
+
+This will add credentials to your service.
 
 
 ## 3. Clone the repo
@@ -97,7 +129,7 @@ Create a `.env` file in the root directory of your clone of the project reposito
 
   **NOTE** Most files systems regard files with a "." at the front as hidden files.  If you are on a Windows system, you should be able to use either [GitBash](https://git-for-windows.github.io/) or [Xcopy](https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/xcopy.mspx?mfr=true)
 
-You will need to update the credentials with the Bluemix credentials for each of the services you created in [Step 2](#2-create-ibm-cloud-services).
+You will need to update the credentials with the IBM Cloud credentials for each of the services you created in [Step 2](#2-create-ibm-cloud-services).
 
 The `.env` file will look something like the following:
 
@@ -126,7 +158,13 @@ The `.env` file will look something like the following:
 
 ## 5. Load Investment Portfolio
 
-You will now need to create a portfolio in your Investment Portfolio service and create holdings for that portfolio. The `holdings.sample.json` file provides you with sample holdings for a portfolio.  You can run the `investmentPortfolio.js` script to load portfolio and holdings.  The credentials are retrieved from `.env` file so ensure that your Investment Portfolio credentials are filled as per the [previous step](#4-configure-env-file).
+You will now need to create a portfolio in your Investment Portfolio service and create holdings for that portfolio. The `holdings.sample.json` file provides you with sample holdings for a portfolio.  You can run the `investmentPortfolio.js` script to load portfolio and holdings.  
+
+The credentials are retrieved from `.env` file as per the [previous step](#4-configure-env-file) or can be added directly to the script.
+
+<p align="left">
+  <img width="650" src="readme_images\investment_portfolio_cred.png">
+</p>
 
 To load a portfolio named `MyFixedIncomePortfolio`, first install dependencies and use the command-line with the script to create the portfolio:
 ```
@@ -160,7 +198,7 @@ cd into this project's root directory
 
 ## 7. Deploy to IBM Cloud
 
-Edit the `manifest.yml` file in the folder that contains your code and replace with a unique name for your application. The name that you specify determines the application's URL, such as `your-application-name.mybluemix.net`. Additionally - update the service names so they match what you have in Bluemix. The relevant portion of the `manifest.yml` file looks like the following:
+Edit the `manifest.yml` file in the folder that contains your code and replace with a unique name for your application. The name that you specify determines the application's URL, such as `your-application-name.mybluemix.net`. Additionally - update the service names so they match what you have in IBM Cloud. The relevant portion of the `manifest.yml` file looks like the following:
 
   ```none
   applications:
@@ -173,11 +211,13 @@ Edit the `manifest.yml` file in the folder that contains your code and replace w
     disk_quota: 256M
     buildpack: sdk-for-nodejs
     services:
-    - Investment-Portfolio
-    - Predictive-Market-Scenarios
-    - Simulated-Instrument-Analytics
-    - Arria-NLG-1
+    - {Investment-Portfolio service name}
+    - {Predictive-Market-Scenarios service name}
+    - {Simulated-Instrument-Analytics service name}
+    - {Arria-Natural-Language-Generaton service name}
   ```
+
+  **NOTE** Add the name of your Arria NLG service to manifest file. This will deploy the application with the service without having to bind later.
 
 Once the manfiest.yml file is configured, you can push to IBM Cloud. From your root directory login into cf:
 ```
