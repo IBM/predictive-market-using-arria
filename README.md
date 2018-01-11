@@ -35,7 +35,7 @@ Go to your application page in IBM Cloud, under Connections choose `Create Conne
 Find your Arria Natural Language Generation service and choose `Connect`:
 
 <p align="left">
-  <img width="650" src="readme_images\connect_service.png">
+  <img width="850" src="readme_images\connect_service.png">
 </p>
 
 Next, load investment portfolio before running the application. First [clone the repo](#3-clone-the-repo) and then use the `investmentPortfolio.js` script to [load your portfolio](#5-load-investment-portfolio).
@@ -101,13 +101,13 @@ Create the following services in IBM Cloud for financial services:
 For each service, go to `service credentials` on the left tab. Select `New Credentials`
 
 <p align="left">
-  <img width="850" src="readme_images\find_credentials.png">
+  <img width="950" src="readme_images\find_credentials.png">
 </p>
 
 Choose a name for your credentials, click `Add`:
 
 <p align="left">
-  <img width="350" src="readme_images\add_credentials.png">
+  <img width="450" src="readme_images\add_credentials.png">
 </p>
 
 This will add credentials to your service.
