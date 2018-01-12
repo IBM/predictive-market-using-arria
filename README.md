@@ -1,3 +1,5 @@
+![IBM Cloud Deployments](https://metrics-tracker.mybluemix.net/stats/d1ab9241bffaad3c8ee5618049271128/badge.svg)
+
 # Predictive Market Using Arria
 
 This Pattern demonstrates how to compute a stress test using the Predictive Market Scenario service and Simulated Instrument Analytics service on a set of investments maintained in the Investment Portfolio service, and then narrate the results using the Arria NLG service.
@@ -22,7 +24,7 @@ When the reader has completed this journey, they will understand how to:
 
 # Automatically Deploying the Application to IBM Cloud
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/devops/setup/deploy?repository=https://github.com/IBM/predictive-market-using-arria.git)
+[![Deploy to IBM Cloud](https://metrics-tracker.mybluemix.net/stats/d1ab9241bffaad3c8ee5618049271128/button.svg)](https://bluemix.net/devops/setup/deploy?repository=https://github.com/IBM/real-time-payments)
 
 You will need to [create Arria service](#1-create-arria-service) in IBM Cloud and then bind the Arria NLG service to your application.
 
