@@ -34,7 +34,6 @@ CX_FXC_JPY_USD_Spot,JPY/USD Rate,FX,1,,,FALSE,,FALSE,,,
 CX_FXC_RUB_USD_Spot,RUB/USD Rate,FX,1,,,FALSE,,FALSE,,,
 CX_EQI_AUSX_Sydney_BMK_AUD_LargeCap_Price,ASX All Ordinaries Index,Index,1,,,FALSE,,FALSE,,,Asia Pacific
 CX_EQI_NYSE_CAC40_BMK_EUR_LargeCap_Price,CAC 40 Index,Index,1,,,FALSE,,FALSE,,,North America
-CX_EQI_SPDJ_USA_BMK_USD_LargeCap_Price,CBOE Market Volatility Index,Index,1,,,FALSE,,FALSE,,,North America
 CX_EQI_STOX_Euro_BMK_EUR_MidCap_Price,EURO STOXX Mid EUR Price Index,Index,1,,,FALSE,,FALSE,,,Europe
 CX_EQI_FTSE_UK_BMK_GBP_LargeCap_Price,FTSE 100 Index,Index,1,,,FALSE,,FALSE,,,United Kingdom
 CX_EQI_HSNG_Asia_BMK_HKD_LargeCap_Price,Hang Seng Index,Index,1,,,FALSE,,FALSE,,,Asia Pacific
