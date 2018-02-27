@@ -99,7 +99,7 @@ class Holdings {
         // Holding line item
         holding_row = this.columns.cloneNode( true );
         holding_row.setAttribute( 'data-sector', sector );
-        holding_row.children[0].innerHTML = holdings[sector][h].companyName;
+        holding_row.children[0].innerHTML = holdings[sector][h].ticker ? holdings[sector][h].ticker: holdings[sector][h].companyName;
         holding_row.children[1].innerHTML = holdings[sector][h].quantity;
         holding_row.children[2].innerHTML = holdings[sector][h].base.toLocaleString( undefined, format );
         holding_row.children[3].innerHTML = holdings[sector][h].base_value.toLocaleString( undefined, format );                        
