@@ -24,7 +24,7 @@ When the reader has completed this journey, they will understand how to:
 
 # Automatically Deploying the Application to IBM Cloud
 
-[![Deploy to IBM Cloud](https://metrics-tracker.mybluemix.net/stats/d1ab9241bffaad3c8ee5618049271128/button.svg)](https://bluemix.net/devops/setup/deploy?repository=https://github.com/IBM/real-time-payments)
+[![Deploy to IBM Cloud](https://metrics-tracker.mybluemix.net/stats/d1ab9241bffaad3c8ee5618049271128/button.svg)](https://bluemix.net/devops/setup/deploy?repository=https://github.com/IBM/predictive-market-using-arria)
 
 You will need to [create Arria service](#1-create-arria-service) in IBM Cloud and then bind the Arria NLG service to your application.
 
