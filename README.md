@@ -2,14 +2,16 @@
 
 # Predictive Market Using Arria
 
-This Pattern demonstrates how to compute a stress test using the Predictive Market Scenario service and Simulated Instrument Analytics service on a set of investments maintained in the Investment Portfolio service, and then narrate the results using the Arria NLG service.
+This code pattern demonstrates how to compute a stress test using the Predictive Market Scenario service and Simulated Instrument Analytics service on a set of investments maintained in the Investment Portfolio service, and then narrate the results using the Arria NLG service.
 
-When the reader has completed this journey, they will understand how to:
+This code pattern is designed for developers with interest in creating financial applications pertaining to investment portfolios.  When the reader has completed this code pattern, they will understand how to:
 
 * Load and retrieve data from the Investment Portfolio service
 * Use the Predictive Market Scenario service to generate a scenario
 * Send data along with a scenario to the Simulated Instrument Analytics service to retrieve analytics
 * Pipe the results to the Arria NLG service which generates a human-readable interpretation of the results
+
+## Architecture flow
 
 <p align="center">
   <img width="800"  src="readme_images/Portfolio.Narrate Architecture.png">
@@ -17,10 +19,15 @@ When the reader has completed this journey, they will understand how to:
 
 
 ## Included Components
-+ Investment Portfolio
-+ Predictive Market Scenario
-+ Simulated Instrument Analytics
-+ Arria NLG
+
+Offered on [IBM Cloud](https://console.bluemix.net/):
+
++ [Investment Portfolio]((https://console.ng.bluemix.net/catalog/services/investment-portfolio))
++ [Predictive Market Scenario](https://console.ng.bluemix.net/catalog/services/predictive-market-scenarios)
++ [Simulated Instrument Analytics](https://console.ng.bluemix.net/catalog/services/simulated-instrument-analytics)
++ [Arria NLG](https://console.bluemix.net/catalog/services/natural-language-generation-apis)
+
+**Note:** these services are free for those who have a Lite account
 
 # Automatically Deploying the Application to IBM Cloud
 
@@ -85,7 +92,7 @@ Next, create the Arria service in IBM Cloud.
 * [**Arria Natural Language Generation APIs**](https://console.bluemix.net/catalog/services/natural-language-generation-apis)
 
 <br>For the `Arria Natural Language Generation API` service in IBM Cloud you will need to provide your API Key from Arria.  </br>
-For the url provide: `https://stresstesting-narrativeapi.arria.com/services/rest/fullnarrative`
+For the url provide: `https://stresstesting-narrativeapi.arria.com/services/rest/fullnarrative`.  Click `Create` to create the service in IBM Cloud.
 
 <p align="left">
   <img width="850" src="readme_images\arria_service.png">
@@ -123,13 +130,13 @@ Clone the `Predict Market Using Arria repo` locally. In a terminal, run:
 
 ## 4. Configure .env file
 
-Create a `.env` file in the root directory of your clone of the project repository by copying the sample `.env.example` file using the following command:
+Create a `.env` file in the root directory of your clone of the project repository by copying the sample `.env.example` file using the following command in terminal:
 
   ```none
   cp .env.example .env
   ```
 
-  **NOTE** Most files systems regard files with a "." at the front as hidden files.  If you are on a Windows system, you should be able to use either [GitBash](https://git-for-windows.github.io/) or [Xcopy](https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/xcopy.mspx?mfr=true)
+  **NOTE** Most files systems regard files with a "." at the front as hidden files.  If you are on a Windows system, you should be able to use either [GitBash](https://git-for-windows.github.io/) or [Xcopy](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy)
 
 You will need to update the credentials with the IBM Cloud credentials for each of the services you created in [Step 2](#2-create-ibm-cloud-services).
 
@@ -160,15 +167,15 @@ The `.env` file will look something like the following:
 
 ## 5. Load Investment Portfolio
 
-You will now need to create a portfolio in your Investment Portfolio service and create holdings for that portfolio. The `holdings.sample.json` file provides you with sample holdings for a portfolio.  You can run the `investmentPortfolio.js` script to load portfolio and holdings.  
+You will now need to create a portfolio in your Investment Portfolio service and create holdings for that portfolio. The `holdings.sample.json` file provides you with sample holdings for a portfolio.  
 
-The credentials are retrieved from `.env` file as per the [previous step](#4-configure-env-file) or can be added directly to the script.
+You can use the `investmentPortfolio.js` script to load portfolio and holdings.  The credentials for Investment Portfolio service are retrieved from `.env` file as per the [previous step](#4-configure-env-file) or can be added directly to the script.
 
 <p align="left">
   <img width="650" src="readme_images\investment_portfolio_cred.png">
 </p>
 
-To load a portfolio named `MyFixedIncomePortfolio`, first install dependencies and use the command-line with the script to create the portfolio:
+To load a portfolio named `MyFixedIncomePortfolio`, first install dependencies and use the command-line with the `investmentPortfolio.js` script to create portfolio.  In the project directory, run the following commands in terminal:
 ```
 npm install
 node investmentPortfolio.js -l MyFixedIncomePortfolio
@@ -192,7 +199,7 @@ node investmentPortfolio.js -g MyFixedIncomePortfolio
 
 ## 6. Run Application
 
-cd into this project's root directory
+In your terminal, cd into this project's root directory
 + Run `npm install` to install the app's dependencies
 + Run `node app.js`
 + Access the running app locally
@@ -232,7 +239,7 @@ cf push
 
 # Troubleshooting
 
-* To troubleshoot your Bluemix application, use the logs. To see the logs, run:
+* To troubleshoot your IBM Cloud application, use the logs. To see the logs, run:
 
 ```bash
 cf logs <application-name> --recent
@@ -242,7 +249,7 @@ cf logs <application-name> --recent
 
 # Privacy Notice
 
-Sample web applications that include this package may be configured to track deployments to [IBM Cloud](https://www.bluemix.net/) and other Cloud Foundry platforms. The following information is sent to a [Deployment Tracker](https://github.com/IBM/metrics-collector-service) service on each deployment:
+This web application includes package configured to track deployments to [IBM Cloud](https://www.bluemix.net/) and other Cloud Foundry platforms. The following information is sent to a [Deployment Tracker](https://github.com/IBM/metrics-collector-service) service on each deployment:
 
 * Node.js package version
 * Node.js repository URL

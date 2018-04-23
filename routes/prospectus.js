@@ -1,60 +1,58 @@
-var backoff = require( 'promise-retry' );
-var express = require( 'express' );
-var fs = require( 'fs-extra' );
-var randomstring = require( 'randomstring' );
-var request = require( 'request-promise' );
-var jsonfile = require( 'jsonfile' );
+var backoff = require('promise-retry');
+var express = require('express');
+var fs = require('fs-extra');
+var randomstring = require('randomstring');
+var request = require('request-promise');
+var jsonfile = require('jsonfile');
 var arriaRequestBuilder = require('../arriaHelpers/arriaRequestBuilder');
 
 // Router
 var router = express.Router();
 
-
-
 // Generate text content
-router.post( '/arria', function( req, res ) {
+router.post('/arria', function(req, res) {
   console.log('getting narrative');
 
   var csv = req.body.model;
   var keyFactorsReadStream = fs.createReadStream('factors.csv');
   var modelReadStream = fs.createReadStream(csv);
-  var vcvReadStream = fs.createReadStream( 'vcv.csv');
-  var scenarioDef ={
+  var vcvReadStream = fs.createReadStream('vcv.csv');
+  var scenarioDef = {
     inputRiskFactorId: req.body.factor,
     inputRiskFactorName: req.body.risk,
     inputMagnitudePercentage: req.body.shock
   };
 
   arriaRequestBuilder.makeExtract(keyFactorsReadStream, modelReadStream, vcvReadStream, scenarioDef, req.body.holdings).then(
-    function(extract){
-        fs.unlink( csv );
-        console.log(extract);
-        console.log('sending extract to arria...');
-        request( {
-            method: 'POST',
-            url: req.config.arria.url,
-            headers: {
-                'content-type': 'application/json',
-                'x-api-key': req.config.arria.key
-            },
-            body: extract,
-            json: true
-          } ).then( function( body ) {
-            res.json( body );
-          } ).catch( function( err ) {
-            console.log( err );
-          } );
-    }).fail(function(err){
+    function(extract) {
+      fs.unlink(csv);
+      console.log(extract);
+      console.log('sending extract to arria...');
+      request({
+        method: 'POST',
+        url: req.config.arria.url,
+        headers: {
+          'content-type': 'application/json',
+          'x-api-key': req.config.arria.key
+        },
+        body: extract,
+        json: true
+      }).then(function(body) {
+        res.json(body);
+      }).catch(function(err) {
         console.log(err);
-    });
+      });
+    }).fail(function(err) {
+    console.log(err);
+  });
 
 
-} );
+});
 
 // List holdings
-router.get( '/holdings', function( req, res ) {
+router.get('/holdings', function(req, res) {
   console.log('get holdings');
-  request( {
+  request({
     method: 'GET',
     url: req.config.portfolio.url + 'api/v1/portfolios/' + req.query.portfolio + '/holdings',
     auth: {
@@ -64,49 +62,51 @@ router.get( '/holdings', function( req, res ) {
     headers: {
       'Content-Type': 'application/json'
     },
-    qs: { latest: 'true' },
-  } ).then( function( body ) {
-    res.send( body );
-  } ).catch( function( err ) {
-    console.log( err );
-  } );
-} );
+    qs: {
+      latest: 'true'
+    },
+  }).then(function(body) {
+    res.send(body);
+  }).catch(function(err) {
+    console.log(err);
+  });
+});
 
 // Create holdings
-router.post( '/holdings', function( req, res ) {
-  fs.readFile( 'holdings.kevin.json', 'utf8' )
-  .then( function( body ) {
-    var data = JSON.parse( body );
-    return request( {
-      method: 'POST',
-      url: req.config.portfolio.url + 'api/v1/portfolios/' + req.body.portfolio + '/holdings',
-      auth: {
-        username: req.config.portfolio.writer.userid,
-        password: req.config.portfolio.writer.password
-      },
-      json: {
-        timestamp: data.timestamp,
-        holdings: data.holdings
-      }
-    } );
-  } ).then( function( body ) {
-    res.send( body );
-  } ).catch( function( err ) {
-    console.log( err );
-  } );
-} );
+router.post('/holdings', function(req, res) {
+  fs.readFile('holdings.kevin.json', 'utf8')
+    .then(function(body) {
+      var data = JSON.parse(body);
+      return request({
+        method: 'POST',
+        url: req.config.portfolio.url + 'api/v1/portfolios/' + req.body.portfolio + '/holdings',
+        auth: {
+          username: req.config.portfolio.writer.userid,
+          password: req.config.portfolio.writer.password
+        },
+        json: {
+          timestamp: data.timestamp,
+          holdings: data.holdings
+        }
+      });
+    }).then(function(body) {
+      res.send(body);
+    }).catch(function(err) {
+      console.log(err);
+    });
+});
 
 // Delete holdings
-router.delete( '/holdings', function( req, res ) {
-  request( {
+router.delete('/holdings', function(req, res) {
+  request({
     method: 'GET',
     url: req.config.portfolio.url + 'api/v1/portfolios/' + req.query.portfolio + '/holdings',
     auth: {
       username: req.config.portfolio.reader.userid,
       password: req.config.portfolio.reader.password
     }
-  } ).then( function( body ) {
-    var data = JSON.parse( body );
+  }).then(function(body) {
+    var data = JSON.parse(body);
     var url =
       req.config.portfolio.url +
       'api/v1/portfolios/' +
@@ -116,118 +116,116 @@ router.delete( '/holdings', function( req, res ) {
       '?rev=' +
       data.holdings[0]._rev;
 
-    return request( {
+    return request({
       method: 'DELETE',
       url: url,
       auth: {
         username: req.config.portfolio.writer.userid,
         password: req.config.portfolio.writer.password
       }
-    } );
-  } ).then( function( body ) {
-    res.send( body );
-  } ).catch( function( err ) {
-    console.log( err );
-  } );
-} );
+    });
+  }).then(function(body) {
+    res.send(body);
+  }).catch(function(err) {
+    console.log(err);
+  });
+});
 
-router.post( '/instrument', function( req, res ) {
+router.post('/instrument', function(req, res) {
   console.log('simulate instruments');
   var instruments = [];
 
-  for( var h = 0; h < req.body.holdings.length; h++ ) {
-    instruments.push( req.body.holdings[h].instrumentId );
+  for (var h = 0; h < req.body.holdings.length; h++) {
+    instruments.push(req.body.holdings[h].instrumentId);
   }
 
-  request( {
+  request({
     method: 'POST',
     url: req.config.instrument.url + 'api/v1/scenario/instruments',
     headers: {
       'X-IBM-Access-Token': req.config.instrument.token
     },
     formData: {
-      scenario_file: fs.createReadStream( req.body.model ),
-      instruments: instruments.join( ',' )
+      scenario_file: fs.createReadStream(req.body.model),
+      instruments: instruments.join(',')
     }
-  } ).then( function( body ) {
+  }).then(function(body) {
     console.log('updating holdings');
-    let data = JSON.parse( body );
+    let data = JSON.parse(body);
 
-    for( var h = 0; h < req.body.holdings.length; h++ ) {
-      for( var i = 0; i < data.length; i++ ) {
-        if( req.body.holdings[h].instrumentId == data[i].instrument ) {
-          let parts = data[i].values[0]['THEO/Price'].split( ' ' );
+    for (var h = 0; h < req.body.holdings.length; h++) {
+      for (var i = 0; i < data.length; i++) {
+        if (req.body.holdings[h].instrumentId == data[i].instrument) {
+          let parts = data[i].values[0]['THEO/Price'].split(' ');
 
           req.body.holdings[h].currency = parts[1].trim();
 
-          if( data[i].scenario.indexOf( 'Base' ) >= 0 ) {
-            req.body.holdings[h].base = parseFloat( parts[0].trim() );
+          if (data[i].scenario.indexOf('Base') >= 0) {
+            req.body.holdings[h].base = parseFloat(parts[0].trim());
           } else {
-            req.body.holdings[h].predicted = parseFloat( parts[0].trim() );
+            req.body.holdings[h].predicted = parseFloat(parts[0].trim());
           }
         }
       }
     }
 
-    return fs.readFile( req.body.model, 'utf8' );
-  } ).then( function( data ) {
+    return fs.readFile(req.body.model, 'utf8');
+  }).then(function(data) {
     console.log('getting factor changes');
-    let rows = data.split( '\n' );
+    let rows = data.split('\n');
     var cells = null;
     var conditions = [];
 
-    for( var r = 1; r < rows.length; r++ ) {
-      let cells = rows[r].split( ',' );
+    for (var r = 1; r < rows.length; r++) {
+      let cells = rows[r].split(',');
 
-      if( cells.length > 14 ) {
+      if (cells.length > 14) {
         let condition = {
           risk: cells[5],
           factor: cells[5],
-          stressed: parseFloat( cells[13] )
+          stressed: parseFloat(cells[13])
         };
 
-        for( var f = 0; f < router.risk.length; f++ ) {
-          if( router.risk[f][condition.factor] && condition.stressed != 1 ) {
+        for (var f = 0; f < router.risk.length; f++) {
+          if (router.risk[f][condition.factor] && condition.stressed != 1) {
             condition.risk = router.risk[f][condition.factor];
-            conditions.push( condition );
+            conditions.push(condition);
           }
         }
       }
     }
-    // need this file for the next step, clean up later
-    //fs.unlink( req.body.model );
 
-    res.json( {
+    res.json({
       holdings: req.body.holdings,
       conditions: conditions,
       model: req.body.model
-    } );
-  } ).catch( function( err ) {
-    console.log( err );
-  } );
-} );
+    });
+  }).catch(function(err) {
+    console.log(err);
+  });
+});
 
 // Login
-router.post( '/login', function( req, res ) {
+router.post('/login', function(req, res) {
   console.log('try login');
   var success = false;
 
-  if( req.config.login.email == req.body.email && req.config.login.password == req.body.password ) {
+  if (req.config.login.email == req.body.email && req.config.login.password == req.body.password) {
     success = true;
   }
 
-  res.json( {
+  res.json({
     success: success
-  } );
-} );
+  });
+});
 
 // List portfolios
-router.get( '/portfolio', function( req, res ) {
+router.get('/portfolio', function(req, res) {
   console.log('get portfolios');
   var hash = null;
 
   // Request token
-  request( {
+  request({
     method: 'GET',
     url: req.config.portfolio.url + 'api/v1/portfolios',
     auth: {
@@ -237,20 +235,20 @@ router.get( '/portfolio', function( req, res ) {
     headers: {
       'Content-Type': 'application/json'
     }
-  } ).then( function( body ) {
+  }).then(function(body) {
     console.log(body);
-    res.send( body );
-  } ).catch( function( err ) {
-    console.log( err );
-  } );
-} );
+    res.send(body);
+  }).catch(function(err) {
+    console.log(err);
+  });
+});
 
 // Create portfolio
-router.post( '/portfolio', function( req, res ) {
+router.post('/portfolio', function(req, res) {
   var hash = null;
 
   // Request token
-  request( {
+  request({
     method: 'POST',
     url: req.config.portfolio.url + 'api/v1/portfolios',
     auth: {
@@ -265,20 +263,20 @@ router.post( '/portfolio', function( req, res ) {
         manager: 'Will Smith'
       }
     }
-  } ).then( function( body ) {
-    res.send( body );
-  } ).catch( function( err ) {
-    console.log( err );
-  } );
-} );
+  }).then(function(body) {
+    res.send(body);
+  }).catch(function(err) {
+    console.log(err);
+  });
+});
 
 // Generate predictive model
-router.post( '/predict', function( req, res ) {
+router.post('/predict', function(req, res) {
   console.log('create scenario');
   let csv = null;
 
-  backoff( function( retry, count ) {
-    return request( {
+  backoff(function(retry, count) {
+    return request({
       method: 'POST',
       url: req.config.predictive.url + 'api/v1/scenario/generate_predictive',
       headers: {
@@ -290,23 +288,23 @@ router.post( '/predict', function( req, res ) {
           shock: req.body.shock
         }
       }
-    } ).catch( retry );
-  } ).then( function( body ) {
+    }).catch(retry);
+  }).then(function(body) {
     csv = randomstring.generate() + '.csv';
-    return fs.writeFile( csv, body );
-  } ).then( function( body ) {
-    res.json( {
+    return fs.writeFile(csv, body);
+  }).then(function(body) {
+    res.json({
       model: csv
-    } );
-  } ).catch( function( err ) {
-    console.log( err );
-  } );
-} );
+    });
+  }).catch(function(err) {
+    console.log(err);
+  });
+});
 
 // List risk factors
-router.get( '/risk', function( req, res ) {
-  res.json( router.risk );
-} );
+router.get('/risk', function(req, res) {
+  res.json(router.risk);
+});
 
 router.risk = [
   {CX_EQI_SPDJ_USA500_BMK_USD_LargeCap_Price: 'S&P 500 Index'},

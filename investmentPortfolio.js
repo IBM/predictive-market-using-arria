@@ -2,7 +2,6 @@ var request = require( 'request-promise' );
 var fs = require( 'fs-extra' );
 require('dotenv').config();
 
-
 READER_USER_ID = process.env.CRED_PORTFOLIO_USERID_R;
 READER_PASSWORD = process.env.CRED_PORTFOLIO_PWD_R;
 WRITER_USER_ID = process.env.CRED_PORTFOLIO_USERID_W;
@@ -22,8 +21,6 @@ function getPortfolio() {
   //get portoflios
   console.log('get portfolios');
   var hash = null;
-
-  // Request
   request( {
     method: 'GET',
     url: BASE_URL + 'api/v1/portfolios',
@@ -70,8 +67,6 @@ function loadPortfolio(portfolioName) {
   console.log('load portfolios');
   var hash = null;
   var timeStamp = +new Date
-
-  // Request
   request( {
     method: 'POST',
     url: BASE_URL + 'api/v1/portfolios/',
@@ -127,7 +122,7 @@ const args = process.argv
 //perfrom call based on command-line args
 if (args[2]) {
   if (args[2] == '-l' ) {
-    //load
+    //load portfolio
     if(args[3]) {
       //get portfolio name
       var portfolioName = args[3];
@@ -150,7 +145,7 @@ if (args[2]) {
         }
       } else {
         //load portfolio
-        console.log("load p " + portfolioName);
+        console.log("load " + portfolioName);
         loadPortfolio(portfolioName);
       }
     }
@@ -158,7 +153,7 @@ if (args[2]) {
       console.log('Enter portfolio name')
     }
   } else if (args[2] == '-g' ) {
-    //get
+    //get portfolio holding
     if(args[3]) {
       portfolioName = args[3];
       getPortfolioHoldings(portfolioName);
@@ -167,11 +162,9 @@ if (args[2]) {
       getPortfolio();
     }
 
-  } else if (args[2] == '-d' ) {
-    deleteAllPortfolioHoldings();
   } else {
     console.log('Try -l or -g')
   }
 }  else {
-  console.log('sTry -l or -g')
+  console.log('Try -l or -g')
 }

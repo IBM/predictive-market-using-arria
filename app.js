@@ -11,7 +11,7 @@ var request = require( 'request' );
 
 var vcapServices = require('vcap_services');
 
-// Bluemix
+// Get ibm cloud environment
 var env = cfenv.getAppEnv();
 var config ={};
 
