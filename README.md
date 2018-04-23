@@ -22,7 +22,7 @@ This code pattern is designed for developers with interest in creating financial
 
 Offered on [IBM Cloud](https://console.bluemix.net/):
 
-+ [Investment Portfolio]((https://console.ng.bluemix.net/catalog/services/investment-portfolio))
++ [Investment Portfolio](https://console.ng.bluemix.net/catalog/services/investment-portfolio)
 + [Predictive Market Scenario](https://console.ng.bluemix.net/catalog/services/predictive-market-scenarios)
 + [Simulated Instrument Analytics](https://console.ng.bluemix.net/catalog/services/simulated-instrument-analytics)
 + [Arria NLG](https://console.bluemix.net/catalog/services/natural-language-generation-apis)
