@@ -54,6 +54,7 @@ function loadScenarioValues(modelReadStream, factors){
     var lineNumber = 0;
     var inSecondSet = false;
     var findingTerm = false;
+    var factorName;
     console.log('Loading Predictive Scenario Values for Arria')
     csv
     .fromStream(modelReadStream)
@@ -67,7 +68,7 @@ function loadScenarioValues(modelReadStream, factors){
             // see if this is start of factor detail (if factor has tenors changes are listed on subsequent lines)
             if (row.length > 5 && row[5].length >0) {
                 findingTerm = false;
-                var factorName = row[5];
+                factorName = row[5];
                 // see if this factor is in the collection and if the file gives it by tenor
                 if (factors.hasFactor(factorName)){
                     if ( row[13] == 'Term'){

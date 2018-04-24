@@ -53,3 +53,8 @@
 #capture > form > .row > .icon > img.active {
   opacity: 0.80;
 }
+
+#capture > form option {
+  background-color: #1d3649;
+
+}

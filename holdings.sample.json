@@ -1,5 +1,5 @@
 {
-  "timestamp": "2017-06-07T19:53:56.830Z",
+  "timestamp": "2017-06-08T19:53:56.830Z",
   "holdings": [
     {
       "asset": "Amgen Inc",
@@ -7,15 +7,17 @@
       "instrumentId": "CX_US031162BG42_USD",
       "companyName": "Amgen Inc",
       "sectorName": "Health Care",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"AMGN 4.1 06/15/21"
     },
     {
       "asset": "Amgen Inc",
       "quantity": "30",
       "instrumentId": "CX_US031162BK53_USD",
-      "companyName": "AMGEN INC",
+      "companyName": "Amgen Inc",
       "sectorName": "Health Care",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"AMGN 5.15 11/15/41"
     },
     {
       "asset": "Envision Healthcare Corp",
@@ -23,7 +25,8 @@
       "instrumentId": "CX_US03232PAD06_USD",
       "companyName": "Envision Healthcare Corp",
       "sectorName": "Health Care",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"EVHC 5.625 07/15/22"
     },
     {
       "asset": "Anadarko Petroleum Corp",
@@ -31,7 +34,8 @@
       "instrumentId": "CX_US032511BM81_USD",
       "companyName": "Anadarko Petroleum Corp",
       "sectorName": "Energy",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"APC 4.85 03/15/21"
     },
     {
       "asset": "Analog Devices Inc",
@@ -39,7 +43,8 @@
       "instrumentId": "CX_US032654AN54_USD",
       "companyName": "Analog Devices Inc",
       "sectorName": "Technology",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"ADI 3.5 12/05/26"
     },
     {
       "asset": "Anheuser-Busch Inbev Finance Inc",
@@ -47,7 +52,8 @@
       "instrumentId": "CX_US035242AJ52_USD",
       "companyName": "Anheuser-Busch Inbev Finance Inc",
       "sectorName": "Consumer Non-cyclical",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"ABIBB 2.65 02/01/21"
     },
     {
       "asset": "Anheuser-Busch Inbev Finance Inc",
@@ -55,15 +61,17 @@
       "instrumentId": "CX_US035242AL09_USD",
       "companyName": "Anheuser-Busch Inbev Finance Inc",
       "sectorName": "Consumer Non-cyclical",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"ABIBB 3.3 02/01/23"
     },
     {
       "asset": "International Business Machines Corp",
       "quantity": "10",
-      "instrumentId": "CX_US4592001014_NYQ",
+      "instrumentId": "CX_US459200HP91_USD",
       "companyName": "IBM",
       "sectorName": "Technology",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"IBM 3.375 08/01/23"
     },
     {
       "asset": "Aercap Ireland Ltd",
@@ -71,7 +79,8 @@
       "instrumentId": "CX_US00772BAM37_USD",
       "companyName": "Aercap Ireland Ltd",
       "sectorName": "Finance Companies",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"AER 5 10/01/21"
     },
     {
       "asset": "Aetna Inc",
@@ -79,7 +88,8 @@
       "instrumentId": "CX_US00817YAU29_USD",
       "companyName": "Aetna Inc",
       "sectorName": "Health Care",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"AET 2.4 06/15/21"
     },
     {
       "asset": "Aetna Inc",
@@ -87,7 +97,8 @@
       "instrumentId": "CX_US00817YAW84_USD",
       "companyName": "Aetna Inc",
       "sectorName": "Health Care",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"AET 3.2 06/15/26"
     },
     {
       "asset": "Microsoft Corp",
@@ -95,7 +106,8 @@
       "instrumentId": "CX_US594918AQ78_USD",
       "companyName": "Microsoft Corp",
       "sectorName": "Technology",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"MSFT 2.125 11/15/22"
     },
     {
       "asset": "Frontier Communications Corp",
@@ -103,7 +115,8 @@
       "instrumentId": "CX_US35906AAL26_USD",
       "companyName": "Frontier Communications Corp",
       "sectorName": "Communications",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"FTR 9.25 07/01/21"
     },
     {
       "asset": "Frontier Communications Corp",
@@ -111,7 +124,8 @@
       "instrumentId": "CX_US35906AAN81_USD",
       "companyName": "Frontier Communications Corp",
       "sectorName": "Communications",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"FTR 7.625 04/15/24"
     },
     {
       "asset": "Fedex Corp",
@@ -119,7 +133,8 @@
       "instrumentId": "CX_US31428XAY22_USD",
       "companyName": "Fedex Corp",
       "sectorName": "Transportation",
-      "assetName": "US Corporate"
+      "assetName": "US Corporate",
+      "ticker":"FDX 4 01/15/24"
     }
   ]
 }

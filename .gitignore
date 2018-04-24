@@ -1,6 +1,7 @@
 node_modules
 config.json
 config2.json
+manifest.local.yml
 /.vscode
 .env
 

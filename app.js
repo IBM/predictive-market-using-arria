@@ -51,7 +51,7 @@ var predictiveCredentials = vcapServices.getCredentials('fss-predictive-scenario
 config.predictive.url = predictiveCredentials.uri||process.env.CRED_PREDICTIVE_MARKET_SCENARIO_URL;
 config.predictive.token = predictiveCredentials.accessToken||process.env.CRED_PREDICTIVE_MARKET_SCENARIO_ACCESSTOKEN;
 
-console.log(JSON.stringify(config));
+//console.log(JSON.stringify(config));
 
 
 // Application

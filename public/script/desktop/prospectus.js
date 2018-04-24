@@ -31,6 +31,18 @@ class Prospectus {
 
     this.holdings = new Holdings();
     this.change = new Change();
+
+    // ensure only positive numbers in the factor box
+    this.shock = document.getElementById('shock');
+
+    // Listen for input event on numInput.
+    this.shock.onkeydown = function(e) {
+        if(!((e.keyCode > 95 && e.keyCode < 106)
+          || (e.keyCode > 47 && e.keyCode < 58) 
+          || e.keyCode == 8)) {
+            return false;
+        }
+    }
   }
 
   doAnalyze( evt ) {
