@@ -15,7 +15,6 @@ applications:
   domain: mybluemix.net
   name: predictive-market-arria
   random-route: true
-  host: predictive-market-with-arria
   disk_quota: 256M
   buildpack: sdk-for-nodejs
   services:
