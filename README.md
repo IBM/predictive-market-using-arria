@@ -29,7 +29,7 @@ Offered on [IBM Cloud](https://console.bluemix.net/):
 
 # Automatically Deploying the Application to IBM Cloud
 
-[![Deploy to IBM Cloud](https://metrics-tracker.mybluemix.net/stats/d1ab9241bffaad3c8ee5618049271128/button.svg)](https://bluemix.net/devops/setup/deploy?repository=https://github.com/IBM/predictive-market-using-arria)
+[![Deploy to IBM Cloud]](https://bluemix.net/devops/setup/deploy?repository=https://github.com/IBM/predictive-market-using-arria)
 
 You will need to [create Arria service](#1-create-arria-service) in IBM Cloud and then bind the Arria NLG service to your application.
 
@@ -244,29 +244,6 @@ cf logs <application-name> --recent
 ```
 
 * If you are running locally - inspect your environment variables closely to confirm they match.
-
-# Privacy Notice
-
-This web application includes package configured to track deployments to [IBM Cloud](https://www.bluemix.net/) and other Cloud Foundry platforms. The following information is sent to a [Deployment Tracker](https://github.com/IBM/metrics-collector-service) service on each deployment:
-
-* Node.js package version
-* Node.js repository URL
-* Application Name (`application_name`)
-* Application GUID (`application_id`)
-* Application instance index number (`instance_index`)
-* Space ID (`space_id`) or OS username
-* Application Version (`application_version`)
-* Application URIs (`application_uris`)
-* Cloud Foundry API (`cf_api`)
-* Labels and names of bound services
-* Number of instances for each bound service and associated plan information
-* Metadata in the repository.yaml file
-
-This data is collected from the `package.json` and `repository.yaml` file in the sample application and the `VCAP_APPLICATION` and `VCAP_SERVICES` environment variables in IBM Cloud and other Cloud Foundry platforms. This data is used by IBM to track metrics around deployments of sample applications to IBM Cloud to measure the usefulness of our examples, so that we can continuously improve the content we offer to you. Only deployments of sample applications that include code to ping the Deployment Tracker service will be tracked.
-
-### Disabling Deployment Tracking
-
-Deployment tracking can be disabled by removing `require('metrics-tracker-client').track();` from the beginning of the `app.js` file at the root of this repository.
 
 
 # License
