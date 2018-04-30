@@ -1,5 +1,3 @@
-![IBM Cloud Deployments](https://metrics-tracker.mybluemix.net/stats/d1ab9241bffaad3c8ee5618049271128/badge.svg)
-
 # Predictive Market Using Arria
 
 This code pattern demonstrates how to compute a stress test using the Predictive Market Scenario service and Simulated Instrument Analytics service on a set of investments maintained in the Investment Portfolio service, and then narrate the results using the Arria NLG service.
