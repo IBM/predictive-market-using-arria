@@ -54,6 +54,8 @@ Follow these steps to setup and run this pattern. The steps are described in det
 ## Prerequisite
 - [node](https://nodejs.org/en/)
 - [npm](https://www.npmjs.com/)
+- [IBM Cloud account](https://console.bluemix.net/registration/?target=%2Fdashboard%2Fapps)
+- [IBM Cloud CLI](https://console.bluemix.net/docs/cli)
 
 ## Steps
 1. [Create Arria service](#1-create-arria-service)
@@ -226,13 +228,13 @@ Edit the `manifest.yml` file in the folder that contains your code and replace w
 
   **NOTE** Add the name of your Arria NLG service to manifest file. This will deploy the application with the service without having to bind later.
 
-Once the manfiest.yml file is configured, you can push to IBM Cloud. From your root directory login into cf:
+Once the manfiest.yml file is configured, you can push to IBM Cloud. From your root directory login into IBM Cloud using CLI:
 ```
-cf login
+bx login
 ```
 And push the app to IBM Cloud:
 ```
-cf push
+bx push
 ```
 
 # Troubleshooting
@@ -240,7 +242,7 @@ cf push
 * To troubleshoot your IBM Cloud application, use the logs. To see the logs, run:
 
 ```bash
-cf logs <application-name> --recent
+bx logs <application-name> --recent
 ```
 
 * If you are running locally - inspect your environment variables closely to confirm they match.
