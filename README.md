@@ -231,7 +231,7 @@ applications:
 
 > **NOTE:** Add the name of your Arria NLG service to manifest file. This will deploy the application with the service without having to bind later.
 
-Once the manfiest.yml file is configured, you can push to IBM Cloud. From your root directory login into IBM Cloud using CLI:
+Once the `manifest.yml` file is configured, you can push to IBM Cloud. From your root directory login into IBM Cloud using CLI:
 
 ```shell
 $ bx login
