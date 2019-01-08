@@ -206,8 +206,8 @@ $ node investmentPortfolio.js -g MyFixedIncomePortfolio
 In your terminal, `cd` into this project's root directory
 
 1. Run `npm install` to install the app's dependencies
-1. Run `node app.js`
-1. Access the running app locally at http://
+1. Run `npm start`
+1. Access the running app locally at http://localhost:8080/
 
 ## 7. Deploy to IBM Cloud
 
