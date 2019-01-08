@@ -80,7 +80,7 @@ app.use( '/api', require( './routes/prospectus' ) );
 
 
 // Listen
-var server = app.listen( env.port, env.bind, function() {
+var server = app.listen(8080, env.bind, function() {
 	// Debug
-	console.log( 'Started on: ' + env.port );
+	console.log( 'Started on: 8080');
 } );

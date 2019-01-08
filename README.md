@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/IBM/predictive-market-using-arria.svg?branch=master)](https://travis-ci.com/IBM/predictive-market-using-arria)
 # Predictive Market Using Arria
 
 This code pattern demonstrates how to compute a stress test using the Predictive Market Scenario service and Simulated Instrument Analytics service on a set of investments maintained in the Investment Portfolio service, and then narrate the results using the Arria NLG service.
