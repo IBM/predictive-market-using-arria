@@ -1,7 +1,7 @@
-language: python
-python:
-  - "3.6"
-install:
-  - pip install -r requirements.txt
+language: node_js
+node_js:
+  - "8"
+before_script:
+  - npm install
 script:
-  - python run.py & sleep 5; if curl http://localhost:8080; then echo “Test passed”; exit 0; else echo “Test failed”; exit 1; fi
+  - npm start & sleep 5; if curl http://localhost:8080; then echo “Test passed”; exit 0; else echo “Test failed”; exit 1; fi
