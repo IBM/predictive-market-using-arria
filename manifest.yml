@@ -1,11 +1,11 @@
 declared-services:
-    Investment-Portfolio:
+    pmua-investment-portfolio:
       label: fss-portfolio-service
       plan: fss-portfolio-service-free-plan
-    Predictive-Market-Scenarios:
+    pmua-predictive-market-scenarios:
       label: fss-predictive-scenario-analytics-service
       plan: fss-predictive-scenario-analytics-service-free-plan
-    Simulated-Instrument-Analytics:
+    pmua-simulated-instrument-analytics:
       label: fss-scenario-analytics-service
       plan: fss-scenario-analytics-service-free-plan
 applications:
@@ -18,6 +18,6 @@ applications:
   disk_quota: 256M
   buildpack: sdk-for-nodejs
   services:
-  - Investment-Portfolio
-  - Predictive-Market-Scenarios
-  - Simulated-Instrument-Analytics
+  - pmua-investment-portfolio
+  - pmua-predictive-market-scenarios
+  - pmua-simulated-instrument-analytics
